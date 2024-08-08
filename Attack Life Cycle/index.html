@@ -459,7 +459,8 @@
 
 
 <h1 id="attack-life-cycle">Attack Life Cycle</h1>
-<p><img alt="" src="../assets/AttackLifeCycle.png" /></p>
+<p>Attackers RINSE &amp; repeat...
+<img alt="" src="../assets/AttackLifeCycle.png" /></p>
 <h2 id="direct-vs-indirect-access-to-objectives">Direct vs Indirect Access to Objectives</h2>
 <p><img alt="" src="../assets/direct.png" />
 Directly from <code>1.Recon</code> to <code>4.Execute Objectives</code> -&gt; Poor web-server configuration leads to exposure of unprotected sensitive files that can be downloaded by anyone. <strong>Can't even consider this as an attack, low hanging fruits for adversaries!</strong> </p>
@@ -467,17 +468,17 @@ Directly from <code>1.Recon</code> to <code>4.Execute Objectives</code> -&gt; Po
 From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers use LinkedIn to figure out who are the HR executives, send deceptive emails to lure them (Phishing) to click on malicious links or execute malware. Just need one employee to give attackers that chance to gain control over a HR asset when the malware infects like a <code>Patient Zero</code> &amp; persists within that endpoint. <strong>Why go through all that tedium when attackers can buy access into corporate VPN?</strong></p>
 <p>First scenario clear illustrates the 3 conditions, valuable information in the form of files are there left exposed, anyone can explore such web-server directories without being noticed, attackers just <a href="https://www.shodan.io">scan a range of Internet addresses</a> to find such poorly configured servers.</p>
 <blockquote>
-<p>Success or failure of cyber-physical attack depends on Necessary and Sufficient prerequisites. Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, if employees are vigilant, they ignore the phishing emails. With robust multi-factor authentication, losing 1st factor of ID &amp; password to dark web is less threatening.</p>
+<p>Success or failure of cyber-physical attack depends on Necessary and Sufficient prerequisites. Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, if employees are vigilant, they ignore the phishing emails. With robust multi-factor VPN authentication, losing 1st factor of ID &amp; password to dark web is less threatening.</p>
 </blockquote>
 <h2 id="disrupt-attack-by-design-instead-of-reacting-to">Disrupt Attack by Design instead of Reacting to...</h2>
 <p>We have been conditioned by the industry to react to yet another vulnerability announcement, wait for vendors to release patches (<em>e.g. Microsoft Patch Tuesday</em>) <strong>or worst, an automatic update that disrupted millions of hosts.</strong> Yet another fancy Threat Actor name/brand from whatever "Intelligence Report". </p>
 <p>All that is part of what I termed as <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.</p>
 <blockquote>
-<p>Threat Accessibility is the condition that we can disrupt effectively by proper design &amp; architecture. </p>
+<p>Threat Accessibility is the condition that we can disrupt attacks effectively by design &amp; architecture with usability &amp; security in mind.</p>
 </blockquote>
 <p>What about the other two conditions?</p>
 <ul>
-<li>Keeping up with vulnerabilities by patching is very challenging &amp; <strong>sometimes disastrous, like the one that <a href="https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/">brought down millions of Windows hosts</a>.</strong></li>
+<li>Keeping up with vulnerabilities by patching (<a href="https://blog.coeo.com/rdp-broken-due-to-windows-update-and-how-to-fix-it-authentication-error">2018 RDP issue</a> after patch, <a href="https://borncity.com/win/2024/07/12/windows-july-2024-updates-break-remote-connections/">2024 July patch broke RDP</a> again) is very challenging &amp; <strong>sometimes disastrous, like the one that <a href="https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/">brought down millions of Windows hosts</a>.</strong></li>
 <li>Threat actors are extremely motivated, creative &amp; resourceful, <strong>defenders are mostly burnt-out by the complexity &amp; challenges</strong>.</li>
 </ul>
 <p>Beyond explaining why Threat Accessibility is the viable condition to disrupt with Attack Life Cycle mental model, <strong>the other important message is to urge system architects to avoid Tit-for-Tat controls that put yourself in a Chase-After-Bad posture.</strong></p>
@@ -485,8 +486,7 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 <blockquote>
 <p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Whenever there's some new offensive method, they release yet another update. </p>
 </blockquote>
-<p>It doesn't matter the fancy name like <em>Indicators-of-Attack</em> labeled onto bad-signatures. It is quite easy to assess: <strong>so long you need to constantly update whenever some new technique emerge, then it is a Tit-for-Tat control. These controls tend to be attack technique specific.</strong> </p>
-<p>What use to be specific to written files like Anti-Virus or network packets patterns as with Network Intrusion Detection systems, now becomes certain specific system activities sequences within the monitored hosts.</p>
+<p>It is quite easy to assess: <strong>so long you need to constantly update whenever some new technique emerge, then it is a Tit-for-Tat control. These controls tend to be attack technique specific.</strong> </p>
 <p>By Design Thinking, it doesn't mean more pretty or shining new tech but how we can make it easy for legit users but yet costly for attackers. Let's use a short but concrete example with reasonable cost-benefit breakdown to illustrate what I mean by Design Thinking.</p>
 <p>...illustrate with Windows client zone vs iPad as desktop...</p>
 <p>This leads to another important concept known as <strong>Attack Surface Management!</strong></p>
