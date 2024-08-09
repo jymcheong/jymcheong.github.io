@@ -553,9 +553,9 @@
 <p><img alt="" src="../../assets/AttackLifeCycle.png" /></p>
 <ul>
 <li><strong>R</strong>econnaissance - Gather information to assess <code>value &amp; vulnerabilities aka System Susceptibility</code></li>
-<li><strong>I</strong>nfiltrate <strong>N</strong>etworks - Get into target networks relates to <code>Threat Accessibility</code></li>
-<li><strong>S</strong>pread Laterally - Stay inside target networks, relates to <code>Threat Capability</code> to stay undetected</li>
-<li><strong>E</strong>xecute Objectives - Ultimately to compromise target networks' Confidentiality, Integrity &amp; Availability objectives</li>
+<li><strong>I</strong>nfiltrate <strong>N</strong>etworks - Get into target networks aka <code>Threat Accessibility</code></li>
+<li><strong>S</strong>pread Laterally - Stay within target networks aka <code>Threat Capability</code> to stay undetected</li>
+<li><strong>E</strong>xecute Objectives - Results to compromised Confidentiality (stolen), Integrity (tampered) &amp; Availability (denied access) of data &amp; networks. For Cyber Physical systems, it can lead to life threatening scenarios.</li>
 </ul>
 <h2 id="direct-vs-indirect-access-to-objectives">Direct vs Indirect Access to Objectives</h2>
 <p><img alt="" src="../../assets/direct.png" />
@@ -568,23 +568,24 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 <p>Success or failure of cyber-physical attack depends on Necessary and Sufficient prerequisites. Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, when employees are vigilant, they report the phishing emails. With robust multi-factor VPN authentication, 1st factor of ID &amp; password sold on dark web is less threatening.</p>
 </blockquote>
 <h2 id="disrupt-attack-life-cycle-by-design-instead-of">Disrupt Attack Life Cycle by Design instead of...</h2>
-<p>Reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, an automatic update that <strong>disrupted millions of hosts.</strong> Basically stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.</p>
+<p>Reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, an automatic update that <strong>disrupted millions of hosts.</strong> Basically stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.
+<img alt="" src="../../assets/hamster-wheel.gif" /></p>
 <blockquote>
 <p>Threat Accessibility is a viable condition that we can disrupt attacks effectively <strong>by design</strong> to achieve usability &amp; security simultaneously.</p>
 </blockquote>
-<p>What about the other two conditions?</p>
+<p>What about the other two conditions? <strong>They contribute to our ending chase!</strong></p>
 <ul>
 <li>Keeping up with vulnerabilities by patching (<a href="https://blog.coeo.com/rdp-broken-due-to-windows-update-and-how-to-fix-it-authentication-error">2018 RDP issue</a> after patch, <a href="https://borncity.com/win/2024/07/12/windows-july-2024-updates-break-remote-connections/">2024 July patch broke RDP</a> again) is very challenging &amp; <strong>sometimes disastrous (Please DO NOT mistaken this as a DON'T patch advice, but rather the need to be selective &amp; mindful of risks.)</strong></li>
-<li>Threat actors are extremely motivated, creative &amp; resourceful. <strong>Defenders are mostly burnt-out by complexity &amp; challenges</strong>.</li>
+<li>Threat actors are extremely motivated, creative &amp; resourceful. <strong>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</strong></li>
 </ul>
-<p>To go beyond justifying Threat Accessibility as a disruption point in the Attack Life Cycle framework, it's crucial to emphasize the need to steer clear of Tit-for-Tat controls, which may result in an unfavorable Chase-After-Bad position.️</p>
+<p><img alt="" src="../../assets/ironDome.jpeg" />
+To go beyond justifying Threat Accessibility as a disruption point in the Attack Life Cycle framework, it's crucial to emphasize the need to steer clear of Tit-for-Tat controls, which may result in an unfavorable Chase-After-Bad position.️</p>
 <h2 id="replace-tit-for-tat-controls-with-design-thinking">Replace Tit-for-Tat Controls with Design Thinking</h2>
 <blockquote>
-<p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Whenever there's some new offensive method, they release yet another update. </p>
+<p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Updates are needed to counter whatever new offensive techniques. </p>
 </blockquote>
-<p>These controls tend to be attack technique specific &amp; added to address a flawed underlying Operating System or network. So long it needs to be constantly updated for the sake of catching up with some new offensive techniques, then it is a Tit-for-Tat control.  </p>
-<p>Design Thinking doesn't mean prettier UI or shining new tech, but how can we achieve good usability for legitimate users but yet costly for attackers to intrude. </p>
-<p>Let's use a short but concrete example to illustrate what I mean by Design Thinking.</p>
+<p>These controls are primarily designed to counteract attack techniques and address vulnerabilities in an operating system or network. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️</p>
+<p>We need Design Thinking to achieve good usability for legitimate users but yet costly for attackers to intrude. Let's use a short but concrete example to illustrate.</p>
 <p>...illustrate with Windows client zone vs iPad as desktop...</p>
 <p>This leads to another important concept known as <strong>Attack Surface Management!</strong></p>
 
