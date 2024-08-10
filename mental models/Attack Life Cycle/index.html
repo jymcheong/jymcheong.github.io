@@ -447,6 +447,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#avoid-admin-ports-exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Admin Ports Exposure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
     <span class="md-ellipsis">
       Avoid Tit-for-Tat Controls
@@ -573,6 +582,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#avoid-admin-ports-exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Admin Ports Exposure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
     <span class="md-ellipsis">
       Avoid Tit-for-Tat Controls
@@ -667,16 +685,25 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 <li>A corporate VPN relying on single-factor authentication grants attackers unfiltered access to an organization's internal resources.️</li>
 </ul>
 <p>We can disrupt such unauthorised access with either Multi-Factor authentication or <a href="https://fidoalliance.org/passkeys/">replacing passwords with passkeys</a>.</p>
+<h2 id="avoid-admin-ports-exposure">Avoid Admin Ports Exposure</h2>
+<blockquote>
+<p>Admin ports like SSH, RDP, VNC should never be accessible over the Internet. Even access to web admin pages should be limited to few IP addresses whenever possible.</p>
+</blockquote>
+<p>There are many freemium software private networks like ZeroTier, Twingate, Tailscale &amp; the likes to limit access. <strong>Instead of using public Internet address, simply configure such remote admin services to use private network address accessible to a few admin endpoints.</strong></p>
 <h2 id="avoid-tit-for-tat-controls">Avoid Tit-for-Tat Controls</h2>
 <blockquote>
 <p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Updates are needed to counter whatever new offensive techniques. </p>
 </blockquote>
 <p>These controls are primarily designed to counteract attack techniques and address hosts or network vulnerabilities. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️</p>
-<blockquote>
-<p>Invest in ZeroTrust architecture that essential makes services &amp; endpoints invisible to attackers &amp; only accessible by authenticated users &amp; devices.</p>
-</blockquote>
+<p>More examples of signature-based Tit-for-Tat Controls (non-exhaustive) :</p>
+<ul>
+<li>Anti-virus</li>
+<li>Web App Firewall</li>
+<li>Network Intrusion Detection </li>
+</ul>
+<p>Encryption facilitates evasion for malware. Malicious network traffic can be obscured through encryption, with a significant proportion of Internet communications encrypted.️</p>
 <h2 id="apply-design-thinking-alc">Apply Design Thinking &amp; ALC</h2>
-<p>With this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, I explain how we can adapt Design Thinking &amp; Attack Life Cycle as means to enhance both usability &amp; security respectively for a new network.</p>
+<p>Now that you have some idea of the pitfalls to avoid, we are ready to use this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, to come up with a more usable &amp; secure network, by applying Design Thinking &amp; Attack Life Cycle mental model.</p>
 <h2 id="recap">Recap</h2>
 <ul>
 <li>Attackers will RINSE &amp; repeat within this Attack Life Cycle.</li>
