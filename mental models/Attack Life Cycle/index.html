@@ -49,6 +49,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-W27KNWVLVP"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-W27KNWVLVP",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-W27KNWVLVP",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -426,9 +436,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
+  <a href="#avoid-tit-for-tat-controls-apply-design-thinking" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Tit-for-Tat Controls
+      Avoid Tit-for-Tat Controls, Apply Design Thinking
     </span>
   </a>
   
@@ -534,9 +544,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
+  <a href="#avoid-tit-for-tat-controls-apply-design-thinking" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Tit-for-Tat Controls
+      Avoid Tit-for-Tat Controls, Apply Design Thinking
     </span>
   </a>
   
@@ -593,27 +603,34 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 </blockquote>
 <p>What about the other two conditions? <strong>They contribute to our ending pains!</strong></p>
 <ul>
-<li>Keeping up with vulnerabilities by patching (<a href="https://blog.coeo.com/rdp-broken-due-to-windows-update-and-how-to-fix-it-authentication-error">2018 RDP issue</a> after patch, <a href="https://borncity.com/win/2024/07/12/windows-july-2024-updates-break-remote-connections/">2024 July patch broke RDP</a> again) is very challenging &amp; <strong>sometimes disastrous (Please DO NOT mistaken this as a DON'T patch advice, but rather the need to be selective &amp; mindful of risks).</strong></li>
+<li>Keeping up with vulnerabilities by patching (<a href="https://blog.coeo.com/rdp-broken-due-to-windows-update-and-how-to-fix-it-authentication-error">2018 RDP issue</a> after patch, <a href="https://borncity.com/win/2024/07/12/windows-july-2024-updates-break-remote-connections/">2024 July patch broke RDP</a> again) is very challenging &amp; <strong>sometimes disastrous. Kindly understand that I'm not suggesting a "don't need to patch", but rather advocating caution and careful consideration before implementing any changes to production systems.️</strong><ul>
+<li>Hypothetically, if Windows were free of bugs, there would still be numerous system tools &amp; mechanisms susceptible to misuse by attackers.</li>
+<li>Those are inherent characteristics rather than software defects. Complex operating systems, including Windows, Linux, MacOS &amp; mobile ones, are all susceptible to such vulnerabilities.️</li>
+</ul>
+</li>
 <li>Threat actors are extremely motivated, creative &amp; resourceful. <strong>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</strong></li>
 </ul>
 <p><img alt="" src="../../assets/ironDome.jpeg" /></p>
 <blockquote>
-<p>To go beyond justifying Threat Accessibility as a disruption point in the Attack Life Cycle framework, it's crucial to emphasize the need to steer clear of Tit-for-Tat controls, which may result in an unfavorable Chase-After-Bad position.️</p>
+<p>Threat Accessibility can be addressed by design, instead of reacting to yet another new vulnerability or offensive method. The typical response to plugging system holes is to apply what I call Tit-for-Tat controls, thus getting ourselves into the unending work of Chase-After-Bad!</p>
 </blockquote>
-<h2 id="avoid-tit-for-tat-controls">Avoid Tit-for-Tat Controls</h2>
+<h2 id="avoid-tit-for-tat-controls-apply-design-thinking">Avoid Tit-for-Tat Controls, Apply Design Thinking</h2>
 <blockquote>
 <p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Updates are needed to counter whatever new offensive techniques. </p>
 </blockquote>
 <p>These controls are primarily designed to counteract attack techniques and address vulnerabilities in an operating system or network. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️</p>
-<p>With this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, to illustrate how we can adapt Design Thinking &amp; Attack Life Cycle as means to enhance both usability &amp; security for a new network for this firm.</p>
+<blockquote>
+<p>For the sake of recurring revenue, the existing Cyber Security complex revolves around collecting such "protection" fees to keep us safe. But with so many high profile Cyber Security companies breaches, <strong>one wonders who watches the watchmen?</strong></p>
+</blockquote>
+<p>With this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, I explain how we can adapt Design Thinking &amp; Attack Life Cycle as means to enhance both usability &amp; security for a new network.</p>
 <h2 id="recap">Recap</h2>
 <ul>
 <li>Attackers will RINSE &amp; repeat within this Attack Life Cycle.</li>
-<li>They can attack <em>directly</em> at services &amp;/or <em>indirectly</em>, by getting into target networks &amp; work their way within to meet their offensive objectives (steal, tamper &amp; deny access to data &amp; systems).</li>
+<li>They can attack <em>directly</em> at services or <em>indirectly</em>, by getting into target networks &amp; work their way within to meet their offensive objectives (steal, tamper &amp; deny access to data &amp; systems).</li>
 <li>Although network attacks seem like a very complex topic, there are only three conditions necessary for any successful attacks.</li>
 <li>It is sufficient to disrupt attack by dealing with any one of the conditions, but keeping up with system vulnerabilities by patching &amp; changing offensive techniques is very difficult for us.</li>
 <li><strong>We can disrupt attacks by design to make systems usable &amp; accessible to legitimate users but much harder to intrude, instead of just reacting to vulnerabilities &amp; threat techniques.</strong></li>
-<li>A [concrete scenario]((/blog/2024/01/31/you_dont_need_windows_network/) was used to illustrate how it can be done.</li>
+<li>A <a href="/blog/2024/01/31/you_dont_need_windows_network/">concrete scenario</a> was used to illustrate how it can be done.</li>
 </ul>
 
 
@@ -623,6 +640,8 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 
 
 
+
+  
 
 
 
