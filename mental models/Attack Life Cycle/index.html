@@ -438,9 +438,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-tit-for-tat-controls-apply-design-thinking" class="md-nav__link">
+  <a href="#avoid-password-only-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Tit-for-Tat Controls, Apply Design Thinking
+      Avoid Password Only Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Tit-for-Tat Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-design-thinking-alc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply Design Thinking &amp; ALC
     </span>
   </a>
   
@@ -546,9 +564,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-tit-for-tat-controls-apply-design-thinking" class="md-nav__link">
+  <a href="#avoid-password-only-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Tit-for-Tat Controls, Apply Design Thinking
+      Avoid Password Only Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Tit-for-Tat Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-design-thinking-alc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply Design Thinking &amp; ALC
     </span>
   </a>
   
@@ -581,6 +617,9 @@
 <h1 id="attack-life-cycle">Attack Life Cycle</h1>
 <h2 id="attackers-rinse-repeat">Attackers RINSE &amp; repeat...</h2>
 <p><img alt="" src="../../assets/AttackLifeCycle.png" /></p>
+<blockquote>
+<p>At the center of this life cycle, are the Necessary &amp; Sufficient conditions of any successful attacks.</p>
+</blockquote>
 <ul>
 <li><strong>R</strong>econnaissance - Gather information to assess <code>value &amp; vulnerabilities aka System Susceptibility</code></li>
 <li><strong>I</strong>nfiltrate <strong>N</strong>etworks - Get into target networks aka <code>Threat Accessibility</code></li>
@@ -603,28 +642,41 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 <blockquote>
 <p>Designing with Threat Accessibility in mind enables us to thwart attacks efficiently while maintaining both usability and security.️</p>
 </blockquote>
-<p>What about the other two conditions? <strong>They contribute to our ending pains!</strong></p>
+<p>What about the other two conditions; <code>System Susceptibility &amp; Threat Capabilities</code> ? <strong>They contribute to our ending pains!</strong></p>
 <ul>
-<li>Keeping up with vulnerabilities by patching (<a href="https://blog.coeo.com/rdp-broken-due-to-windows-update-and-how-to-fix-it-authentication-error">2018 RDP issue</a> after patch, <a href="https://borncity.com/win/2024/07/12/windows-july-2024-updates-break-remote-connections/">2024 July patch broke RDP</a> again) is very challenging &amp; <strong>sometimes disastrous. Kindly understand that I'm not suggesting a "don't need to patch", but rather advocating caution and careful consideration before implementing any changes to production systems.️</strong><ul>
+<li>Keeping up with vulnerabilities by patching is very challenging &amp; sometimes disastrous. <strong>I'm not suggesting a "don't need to patch", but rather advocating caution and careful consideration before implementing any changes to production systems.️</strong><ul>
 <li>Hypothetically, if Windows were free of bugs, there would still be numerous system tools &amp; mechanisms susceptible to misuse by attackers.</li>
 <li>Those are inherent characteristics rather than software defects. Complex operating systems, including Windows, Linux, MacOS &amp; mobile ones, are all susceptible to such vulnerabilities.️</li>
+<li><em>Vulnerabilities cover beyond software bugs, but includes poor designed features that can be abused.</em></li>
+<li>Preference is given to securing "Crown Jewels" in our asset evaluation, while attackers typically focus on exploiting low-priority assets for their initial entry point.️</li>
 </ul>
 </li>
 <li>Threat actors are extremely motivated, creative &amp; resourceful. <strong>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</strong></li>
 </ul>
 <p><img alt="" src="../../assets/ironDome.jpeg" /></p>
 <blockquote>
-<p>Threat Accessibility can be addressed by design, instead of reacting to yet another new vulnerability or offensive method. The typical response to plugging system holes is to apply what I call Tit-for-Tat controls, thus getting ourselves into the unending work of Chase-After-Bad!</p>
+<p>Threat Accessibility can be addressed by design, instead of reacting to yet another new vulnerability or offensive method. When designed well, even vulnerable assets are harder to reach.</p>
 </blockquote>
-<h2 id="avoid-tit-for-tat-controls-apply-design-thinking">Avoid Tit-for-Tat Controls, Apply Design Thinking</h2>
+<h2 id="avoid-password-only-access">Avoid Password Only Access</h2>
+<blockquote>
+<p>Single-factor authentication refers to the process of verifying identity through the use of one identifier, such as an email address or username, coupled with a password.️ Upon obtaining these credentials, there is a significant risk that password reuse will grant Threat Actors access to the majority of associated services.️</p>
+</blockquote>
+<p>As <a href="./#direct-vs-indirect-access-to-objectives">illustrated earlier</a>:</p>
+<ul>
+<li>Malicious actors have the ability to gain unauthorised access to email accounts and assume control over online identities.️</li>
+<li>A corporate VPN relying on single-factor authentication grants attackers unfiltered access to an organization's internal resources.️</li>
+</ul>
+<p>We can disrupt such unauthorised access with either Multi-Factor authentication or <a href="https://fidoalliance.org/passkeys/">replacing passwords with passkeys</a>.</p>
+<h2 id="avoid-tit-for-tat-controls">Avoid Tit-for-Tat Controls</h2>
 <blockquote>
 <p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Updates are needed to counter whatever new offensive techniques. </p>
 </blockquote>
-<p>These controls are primarily designed to counteract attack techniques and address vulnerabilities in an operating system or network. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️</p>
+<p>These controls are primarily designed to counteract attack techniques and address hosts or network vulnerabilities. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️</p>
 <blockquote>
-<p>For the sake of recurring revenue, the existing Cyber Security complex revolves around collecting "protection" fees to keep us safe. But with so many high profile Cyber Security companies breaches, <strong>one wonders who watches the watchmen?</strong></p>
+<p>Invest in ZeroTrust architecture that essential makes services &amp; endpoints invisible to attackers &amp; only accessible by authenticated users &amp; devices.</p>
 </blockquote>
-<p>With this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, I explain how we can adapt Design Thinking &amp; Attack Life Cycle as means to enhance both usability &amp; security for a new network.</p>
+<h2 id="apply-design-thinking-alc">Apply Design Thinking &amp; ALC</h2>
+<p>With this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, I explain how we can adapt Design Thinking &amp; Attack Life Cycle as means to enhance both usability &amp; security respectively for a new network.</p>
 <h2 id="recap">Recap</h2>
 <ul>
 <li>Attackers will RINSE &amp; repeat within this Attack Life Cycle.</li>
