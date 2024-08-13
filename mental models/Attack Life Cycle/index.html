@@ -418,18 +418,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disrupt-attack-life-cycle-by-design-instead-of" class="md-nav__link">
+  <a href="#disrupt-attacks-by-design-instead-of" class="md-nav__link">
     <span class="md-ellipsis">
-      Disrupt Attack Life Cycle by Design instead of...
+      Disrupt Attacks by Design instead of...
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-password-only-access" class="md-nav__link">
+  <a href="#avoid-single-factor-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Password Only Access
+      Avoid Single-Factor Authentication
     </span>
   </a>
   
@@ -445,9 +445,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
+  <a href="#avoid-signature-based-controls" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Tit-for-Tat Controls
+      Avoid Signature-based Controls
     </span>
   </a>
   
@@ -553,18 +553,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disrupt-attack-life-cycle-by-design-instead-of" class="md-nav__link">
+  <a href="#disrupt-attacks-by-design-instead-of" class="md-nav__link">
     <span class="md-ellipsis">
-      Disrupt Attack Life Cycle by Design instead of...
+      Disrupt Attacks by Design instead of...
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-password-only-access" class="md-nav__link">
+  <a href="#avoid-single-factor-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Password Only Access
+      Avoid Single-Factor Authentication
     </span>
   </a>
   
@@ -580,9 +580,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-tit-for-tat-controls" class="md-nav__link">
+  <a href="#avoid-signature-based-controls" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Tit-for-Tat Controls
+      Avoid Signature-based Controls
     </span>
   </a>
   
@@ -625,48 +625,61 @@
 <h2 id="attackers-rinse-repeat">Attackers RINSE &amp; repeat...</h2>
 <p><img alt="" src="../../assets/AttackLifeCycle.png" /></p>
 <blockquote>
-<p>At the center of this life cycle, are the Necessary &amp; Sufficient conditions of any successful attacks.</p>
+<p>The Necessary &amp; Sufficient conditions of any successful attacks is at the center of this Attack Life Cycle.</p>
 </blockquote>
 <ul>
-<li><strong>R</strong>econnaissance - Gather information to assess <code>value &amp; vulnerabilities aka System Susceptibility</code></li>
-<li><strong>I</strong>nfiltrate <strong>N</strong>etworks - Get into target networks aka <code>Threat Accessibility</code></li>
-<li><strong>S</strong>pread Laterally - Stay within target networks aka <code>Threat Capability</code> to stay undetected</li>
-<li><strong>E</strong>xecute Objectives - Results to compromised Confidentiality (stolen), Integrity (tampered) &amp; Availability (denied access) of data &amp; networks. For Cyber Physical systems, it can threaten lives.</li>
+<li><strong>R</strong>econnaissance - Gather information to assess <code>Value &amp; Vulnerabilities</code> sum up to `System Susceptibility</li>
+<li><strong>I</strong>nfiltrate <strong>N</strong>etworks - <code>Threat Accessibility</code> refers to the means to get into target networks</li>
+<li><strong>S</strong>pread Laterally - Stay within target networks undetected depends on <code>Threat Capability</code> which requires tools, techniques &amp; resources </li>
+<li><strong>E</strong>xecute Objectives - to steal which impacts Confidentiality, tamper with system &amp; data Integrity &amp; deny Availability of data &amp; networks. For critical Cyber Physical systems, it can threaten lives.</li>
 </ul>
 <h2 id="direct-vs-indirect-access-to-objectives">Direct vs Indirect Access to Objectives</h2>
 <p><img alt="" src="../../assets/direct.png" />
 Directly from <code>1.Recon</code> to <code>4.Execute Objectives</code> -&gt; Poor web-server configuration leads to exposure of unprotected sensitive files that can be downloaded by anyone. <strong>Can't even consider this as an attack, low hanging fruits for adversaries!</strong> </p>
 <p><img alt="" src="../../assets/indirectAccess.png" />
-From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers use LinkedIn to figure out who are the HR executives, send deceptive emails to lure them (Phishing) to click on malicious links or execute malware. Just need one employee to give attackers that chance to gain control over a HR asset when the malware infects like a <code>Patient Zero</code> &amp; persists within that endpoint. <strong>Why go through all that trouble when attackers can buy access into corporate VPN?</strong></p>
+From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers use LinkedIn to figure out who are the HR executives, send deceptive emails to lure them (Phishing) to click on malicious links or execute malware. Just need one employee to give attackers that chance to gain control over a HR asset when the malware infects like a <code>Patient Zero</code> &amp; persists within that endpoint. <strong>Why go through all that trouble when attackers can buy access into corporate Virtual Private Network?</strong></p>
 <p><img alt="" src="../../assets/exposureFlow.jpeg" /></p>
 <p>First scenario clear illustrates the 3 conditions, valuable information in the form of files are there left exposed, anyone can explore such web-server directories without being noticed. Attackers just need to <a href="https://www.shodan.io">scan a range of Internet addresses</a> to find vulnerable servers.</p>
 <blockquote>
 <p>Success or failure of cyber-physical attack depends on Necessary and Sufficient prerequisites. Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, when employees are vigilant, they report the phishing emails. With robust multi-factor VPN authentication, 1st factor of ID &amp; password sold on dark web is less threatening.</p>
 </blockquote>
-<h2 id="disrupt-attack-life-cycle-by-design-instead-of">Disrupt Attack Life Cycle by Design instead of...</h2>
-<p>Reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, automatic updates that <strong>disrupted millions of Windows hosts.</strong> Basically stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.
-<img alt="" src="../../assets/hamster-wheel.gif" /></p>
+<h2 id="disrupt-attacks-by-design-instead-of">Disrupt Attacks by Design instead of...</h2>
+<p>Reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, automatic updates that <strong>disrupted millions of Windows hosts.</strong> Basically stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.</p>
+<p><img alt="" src="../../assets/hamster-wheel.gif" /></p>
+<p>I always reuse this simple lesson plan for my interns: </p>
+<ul>
+<li>Sign up a free cloud Linux server but make sure the admin account for provisioning the virtual server has strong or multi-factor authentication.</li>
+<li>Create a small virtual Linux server &amp; with a strong password.</li>
+<li>Figure out where or setup the audit log such that they can review authentication attempts.</li>
+<li>Start a console session that showed live audit events for monitoring.</li>
+<li><em>They will notice that within a short while, many failed secure shell or SSH attempts will start appearing in that console session earlier.</em></li>
+</ul>
 <blockquote>
-<p>Designing with Threat Accessibility in mind enables us to thwart attacks efficiently while maintaining both usability and security.️</p>
+<p><strong>Learning point: with a weak passwords, the brute-forced attempts would have led to successful admin access if they had configured to allow super user (aka root) to SSH.</strong></p>
+</blockquote>
+<ul>
+<li>I point them to a couple of free private network (similar to Virtual Private Network but different in terms of network architecture) like <a href="https://www.zerotier.com">ZeroTier</a> &amp; <a href="https://www.twingate.com">Twingate</a>.</li>
+<li>They reconfigured secure shell server to <strong>only accept connections from the same private network</strong>.</li>
+<li><strong>NO MORE brute-force attempts.</strong></li>
+<li><strong>Even if the passwords were weak, attackers cannot reach the server to test it.</strong> </li>
+</ul>
+<blockquote>
+<p>Designing with Threat Accessibility in mind enables us to disrupt attacks effectively while maintaining both usability and security.️ </p>
 </blockquote>
 <p>What about the other two conditions; <code>System Susceptibility &amp; Threat Capabilities</code> ? <strong>They contribute to our ending pains!</strong></p>
 <ul>
 <li>Keeping up with vulnerabilities by patching is very challenging &amp; sometimes disastrous. <strong>I'm not suggesting a "don't need to patch", but rather advocating caution and careful consideration before implementing any changes to production systems.️</strong><ul>
 <li>Hypothetically, if Windows were free of bugs, there would still be numerous system tools &amp; mechanisms susceptible to misuse by attackers.</li>
-<li>Those are inherent characteristics rather than software defects. Complex operating systems, including Windows, Linux, MacOS &amp; mobile ones, are all susceptible to such vulnerabilities.️</li>
+<li>Those are inherent features rather than defects. Complex operating systems, including Windows, Linux, MacOS &amp; mobile ones, are all have such vulnerabilities.️</li>
 <li><em>Vulnerabilities cover both software bugs &amp; poorly designed features that can be abused.</em></li>
-<li>Preference is given to securing "Crown Jewels" in our asset evaluation &amp; risk mitigation, while attackers typically focus on exploiting low-priority assets for their initial entry point.️</li>
 </ul>
 </li>
 <li>Threat actors are extremely motivated, creative &amp; resourceful. <strong>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</strong></li>
 </ul>
 <p><img alt="" src="../../assets/ironDome.jpeg" /></p>
+<h2 id="avoid-single-factor-authentication">Avoid Single-Factor Authentication</h2>
 <blockquote>
-<p>Threat Accessibility can be addressed by design, instead of reacting to yet another new vulnerability or offensive method. When designed well, even vulnerable assets are harder to reach.</p>
-</blockquote>
-<h2 id="avoid-password-only-access">Avoid Password Only Access</h2>
-<blockquote>
-<p>Single-factor authentication refers to the process of verifying identity through the use of one identifier, such as an email address or username, coupled with a password.️ Upon obtaining these credentials, there is a significant risk that password reuse will grant Threat Actors access to the majority of associated services.️</p>
+<p>Single-factor authentication refers to the process of verifying identity through the <strong>use of one identifier, such as an email address or username, coupled with a password</strong>.️ Upon obtaining these credentials, there is a significant risk that password reuse will grant Threat Actors access to other services for affected users.️</p>
 </blockquote>
 <p>As <a href="./#direct-vs-indirect-access-to-objectives">illustrated earlier</a>:</p>
 <ul>
@@ -679,12 +692,12 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code> -&gt; Attackers 
 <p>Admin ports like SSH, RDP, VNC should never be accessible over the Internet. Even access to web admin pages should be limited to few IP addresses whenever possible.</p>
 </blockquote>
 <p>There are many freemium software private networks like ZeroTier, Twingate, Tailscale &amp; the likes to limit access. <strong>Instead of using public Internet address, simply configure such remote admin services to use private network address accessible to a few admin endpoints.</strong></p>
-<h2 id="avoid-tit-for-tat-controls">Avoid Tit-for-Tat Controls</h2>
+<h2 id="avoid-signature-based-controls">Avoid Signature-based Controls</h2>
 <blockquote>
-<p>The Crowdstrike Channel File incident is a prime example of Tit-for-Tat control. Updates are needed to counter whatever new offensive techniques. </p>
+<p>The Crowdstrike Channel File incident is a prime example of Signature-based control. Updates are needed to counter whatever new offensive techniques. </p>
 </blockquote>
-<p>These controls are primarily designed to counteract attack techniques and address hosts or network vulnerabilities. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️</p>
-<p>More examples of signature-based Tit-for-Tat Controls (non-exhaustive) :</p>
+<p>These controls are primarily designed to counteract attack techniques and address hosts or network vulnerabilities. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️ <strong>Malware &amp; offensive techniques are part of an infinite set, such controls will never keep up.</strong></p>
+<p>More examples of Signature-based Tit-for-Tat Controls (non-exhaustive) :</p>
 <ul>
 <li>Anti-virus</li>
 <li>Web App Firewall</li>
