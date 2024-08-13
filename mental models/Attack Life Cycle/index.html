@@ -666,15 +666,16 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 <blockquote>
 <p>Designing with Threat Accessibility in mind enables us to disrupt attacks effectively while maintaining both usability and security.️ </p>
 </blockquote>
-<p>What about the other two conditions; <code>System Susceptibility &amp; Threat Capabilities</code> ? <strong>They contribute to our ending pains!</strong></p>
+<p>What about the other two conditions; <code>System Susceptibility &amp; Threat Capabilities</code> ? </p>
+<p><strong>They contribute to the unending Chase-After-Bad posture!</strong></p>
 <ul>
-<li>Getting rid of vulnerabilities by patching is very challenging &amp; sometimes disastrous. <strong>I'm not suggesting "don't need to patch", but we have to exercise caution and careful consideration before implementing any changes to production systems.️</strong><ul>
+<li><em>Getting rid of vulnerabilities</em> by patching is an impossible task. <strong>I'm not suggesting "don't need to patch", but we have to exercise caution and careful consideration before implementing any changes to production systems.️</strong><ul>
 <li>Hypothetically, if Windows were free of bugs, there would still be numerous system tools &amp; mechanisms susceptible to misuse by attackers.</li>
 <li>Those are inherent features rather than defects. Complex operating systems, including Windows, Linux, MacOS &amp; mobile ones, are all have such vulnerabilities.️</li>
 <li><em>Vulnerabilities cover both software bugs &amp; poorly designed features that can be abused.</em></li>
 </ul>
 </li>
-<li>Threat actors are extremely motivated, creative &amp; resourceful. <em>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</em> <strong>We have NO control over this aspect.</strong>
+<li>Threat actors are extremely motivated, creative &amp; resourceful. <strong><em>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</em></strong> <strong>We have NO control over this aspect.</strong>
 <img alt="" src="../../assets/ironDome.jpeg" /></li>
 </ul>
 <h2 id="avoid-single-factor-authentication">Avoid Single-Factor Authentication</h2>
@@ -689,7 +690,7 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 <p>We can disrupt such unauthorised access with either Multi-Factor authentication or <a href="https://fidoalliance.org/passkeys/">replacing passwords with passkeys</a>.</p>
 <h2 id="avoid-admin-ports-exposure">Avoid Admin Ports Exposure</h2>
 <blockquote>
-<p>Admin ports like SSH, RDP, VNC should never be accessible over the Internet. Even access to web admin pages should be limited to few IP addresses whenever possible.</p>
+<p>Admin access ports like SSH, RDP, VNC should never be accessible over the Internet. Even access to web admin pages should be limited to few IP addresses whenever possible.</p>
 </blockquote>
 <p>There are many freemium software private networks like ZeroTier, Twingate, Tailscale &amp; the likes to limit access. <strong>Instead of using public Internet address, simply configure such remote admin services to use private network address accessible to a few admin endpoints.</strong></p>
 <h2 id="avoid-signature-based-controls">Avoid Signature-based Controls</h2>
