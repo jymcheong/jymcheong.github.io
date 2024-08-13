@@ -648,17 +648,17 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 <p><img alt="" src="../../assets/hamster-wheel.gif" /></p>
 <p>I always reuse this simple lesson plan for my interns: </p>
 <ul>
-<li>Sign up a free cloud Linux server but make sure the admin account for provisioning the virtual server has strong or multi-factor authentication.</li>
-<li>Create a small virtual Linux server &amp; with a strong password.</li>
-<li>Figure out where or setup the audit log such that they can review authentication attempts.</li>
-<li>Start a console session that showed live audit events for monitoring.</li>
+<li>Sign up a free cloud Linux server.</li>
+<li>Start the virtual Linux server &amp; use a strong password.</li>
+<li>Configure audit log to review authentication attempts.</li>
+<li>Start monitoring audit events.</li>
 <li><em>They will notice that within a short while, many failed secure shell or SSH attempts will start appearing in that console session earlier.</em></li>
 </ul>
 <blockquote>
-<p><strong>Learning point: with a weak passwords, the brute-forced attempts would have led to successful admin access if they had configured to allow super user (aka root) to SSH.</strong></p>
+<p>If the system allowed root (super-user) access via SSH (secure shell access) with weak passwords, brute-force attacks could have resulted in successful admin logins.️</p>
 </blockquote>
 <ul>
-<li>I point them to a couple of free private network (similar to Virtual Private Network but different in terms of network architecture) like <a href="https://www.zerotier.com">ZeroTier</a> &amp; <a href="https://www.twingate.com">Twingate</a>.</li>
+<li>I direct them to a couple of free private network (similar to Virtual Private Network but different in terms of network architecture) like <a href="https://www.zerotier.com">ZeroTier</a> &amp; <a href="https://www.twingate.com">Twingate</a>.</li>
 <li>They reconfigured secure shell server to <strong>only accept connections from the same private network</strong>.</li>
 <li><strong>NO MORE brute-force attempts.</strong></li>
 <li><strong>Even if the passwords were weak, attackers cannot reach the server to test it.</strong> </li>
