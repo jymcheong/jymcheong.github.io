@@ -228,6 +228,26 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../About%20Jym/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Jym
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -238,10 +258,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -252,8 +272,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
           </label>
@@ -326,10 +346,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -340,8 +360,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Mental models
           </label>
@@ -624,29 +644,31 @@
 <h1 id="attack-life-cycle">Attack Life Cycle</h1>
 <h2 id="attackers-rinse-repeat">Attackers RINSE &amp; repeat</h2>
 <p><img alt="" src="../../assets/AttackLifeCycle.png" /></p>
-<blockquote>
-<p>The Necessary &amp; Sufficient conditions of any successful attacks is at the center of this Attack Life Cycle.</p>
-</blockquote>
+<p><strong>For a successful attack, all necessary <code>conditions</code> depicted by the triangles must be met.️</strong></p>
 <ul>
 <li><strong>R</strong>econnaissance - Gather information to assess <code>Value &amp; Vulnerabilities</code> compound to <code>System Susceptibility</code></li>
 <li><strong>I</strong>nfiltrate <strong>N</strong>etworks - <code>Threat Accessibility</code> refers to the means to get into target networks</li>
 <li><strong>S</strong>pread Laterally - Stay within target networks undetected depends on <code>Threat Capability</code> which requires tools, techniques &amp; resources </li>
 <li><strong>E</strong>xecute Objectives - to steal which impacts Confidentiality, tamper with system &amp; data Integrity &amp; deny Availability of data &amp; networks. For critical Cyber Physical systems, it can threaten lives.</li>
 </ul>
+<blockquote>
+<p>To effectively counteract potential attacks, identifying and disrupting the appropriate conditions is crucial. However, <strong>determining which condition(s) to prioritise can be a complex decision.</strong>️</p>
+</blockquote>
+<p>Let's examine the process from the standpoint of an adversary.️</p>
 <h2 id="direct-vs-indirect-access">Direct vs Indirect Access</h2>
 <p><img alt="" src="../../assets/direct.png" />
 An example of direct access from <code>1.Recon</code> to <code>4.Execute Objectives</code>: <em>Poor web-server configuration leads to exposure of unprotected sensitive files that can be downloaded by anyone.</em> <strong>Low hanging fruits for adversaries!</strong> </p>
 <p><img alt="" src="../../assets/indirectAccess.png" />
 From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use LinkedIn to figure out who are the HR executives, send deceptive emails to lure them (Phishing) to click on malicious links or execute malware. <em>Just need one employee to give attackers that chance to gain control over a HR asset when the malware infects like a</em> <code>Patient Zero</code> <em>&amp; persists within that endpoint</em>. <strong>Why go through all that trouble when attackers can buy access into corporate Virtual Private Network?</strong></p>
 <p><img alt="" src="../../assets/exposureFlow.jpeg" /></p>
-<p>The flow chart covers both direct &amp; indirect access. The attackers have the skills to carry out intrusions from either way. Internet gives them the access to reach vulnerable assets &amp; victims.</p>
+<p>The flow chart covers both direct &amp; indirect access. The attackers have the skills to carry out intrusions from either way. Internet gives them the access to reach vulnerable assets &amp; victims, otherwise attackers have to be physical present or near the targets.</p>
 <blockquote>
-<p>Success or failure of cyber-physical attack depends on Necessary and Sufficient prerequisites. Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, when employees are vigilant, they report the phishing emails. With robust multi-factor VPN authentication, 1st factor of ID &amp; password sold on dark web is less threatening.</p>
+<p>Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, when employees are vigilant, they report the phishing emails. With robust multi-factor VPN authentication, 1st factor of ID &amp; password sold on dark web is less threatening.</p>
 </blockquote>
 <h2 id="disrupt-attacks-by-design">Disrupt Attacks by Design</h2>
 <p>Instead of reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, automatic updates that <strong>disrupted millions of Windows hosts.</strong> Basically stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.</p>
 <p><img alt="" src="../../assets/hamster-wheel.gif" /></p>
-<p>I always reuse this simple lesson plan for my interns: </p>
+<p>An effective lesson plan for my interns to learn about Threat Accessibility &amp; privileged administrator access: </p>
 <ul>
 <li>Sign up a free cloud Linux server.</li>
 <li>Start the virtual Linux server &amp; use a strong password.</li>
@@ -706,7 +728,7 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 </ul>
 <p>Encryption facilitates evasion for malware. Malicious network traffic can be obscured through encryption, with a significant proportion of Internet communications encrypted.️</p>
 <h2 id="apply-design-thinking-alc">Apply Design Thinking &amp; ALC</h2>
-<p>Now that you have some idea of the pitfalls to avoid, we are ready to use this <a href="/blog/2024/01/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, to come up with a more usable &amp; secure network, by applying Design Thinking &amp; Attack Life Cycle mental model.</p>
+<p>Now that you have some idea of the pitfalls to avoid, we are ready to use this <a href="/blog/2024/08/31/you_dont_need_windows_network/">scenario of a tech refresh for a hypothetical law firm</a>, to come up with a more usable &amp; secure network, by applying Design Thinking &amp; Attack Life Cycle mental model.</p>
 <h2 id="recap">Recap</h2>
 <ul>
 <li>Attackers will RINSE &amp; repeat within this Attack Life Cycle.</li>
@@ -714,7 +736,7 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 <li>Although network attacks seem like a very complex topic, there are only three conditions necessary for any successful attacks.</li>
 <li>It is sufficient to disrupt attack by dealing with any one of the conditions, but keeping up with system vulnerabilities by patching &amp; changing offensive techniques is very difficult for us.</li>
 <li><strong>We can disrupt attacks by design to make systems usable &amp; accessible to legitimate users but much harder to intrude, instead of just reacting to vulnerabilities &amp; threat techniques.</strong></li>
-<li>A <a href="/blog/2024/01/31/you_dont_need_windows_network/">concrete scenario</a> was used to illustrate how it can be done.</li>
+<li>A <a href="/blog/2024/08/31/you_dont_need_windows_network/">concrete scenario</a> was used to illustrate how it can be done.</li>
 </ul>
 
 
