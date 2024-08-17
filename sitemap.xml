@@ -16,12 +16,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jymcheong.github.io/blog/2024/08/31/you_dont_need_windows_network/</loc>
+         <lastmod>2024-08-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jymcheong.github.io/mental%20models/Attack%20Life%20Cycle/</loc>
          <lastmod>2024-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/mental%20models/TTPs/</loc>
+         <lastmod>2024-08-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jymcheong.github.io/blog/archive/2024/</loc>
+         <lastmod>2024-08-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jymcheong.github.io/blog/category/attack-life-cycle/</loc>
+         <lastmod>2024-08-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jymcheong.github.io/blog/category/mental-models/</loc>
          <lastmod>2024-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
