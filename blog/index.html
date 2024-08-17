@@ -727,27 +727,13 @@ Status: Completed</p>
 <p>Reference: <a href="https://www.zerotier.com/download/">https://www.zerotier.com/download/</a></p>
 <p>The installation of ZeroTier on Linux can be done with one line of command:</p>
 <p><code>curl -s https://install.zerotier.com | sudo bash</code></p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled.png" /></p>
-<blockquote>
-<p>*Note the ZeroTier address that was generated.
-</p>
-</blockquote>
-<h3 id="how-to-join-the-private-network"><a class="toclink" href="2021/05/12/install_zerotier_on_your_linux_vm__join_your_private_network/#how-to-join-the-private-network">How to join the private network?</a></h3>
-<p>From the command line, simply type <code>sudo zerotier-cli join NetworkID</code> with NetworkID being the 16-digit network ID of the network you wish to join:</p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%201.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%201.png" /></p>
-<p>You will receive a 200 join OK message, confirming that the ZeroTier service on your server has understood the command. If you do not, double-check the ZeroTier Network ID you entered.</p>
-<p>Since we created a private network, we now need to authorize the Linux VM.</p>
-<p>Step 1: Go to the <strong>ZeroTier Web Console</strong>. We can now see that the <strong>Online Members</strong> has changed from 0 to 1, indicating that the Linux VM has successfully joined the private network. However, the <strong>Authorized Members</strong> remains as 0 as we have yet to authorize the Linux VM.</p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%202.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%202.png" /></p>
-<p>Step 2: Select the network and scroll down till you reach the <strong>Members</strong> section. You should spot an entry marked as Online, with the same address that you noted earlier.</p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%203.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%203.png" /></p>
-<p>Step 3: In the first column marked <strong>Auth?</strong>, tick the box to authorize the Linux VM to join the network. The ZeroTier Controller will allocate an IP address to the VM from the range the next time it calls the SDN.</p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%204.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%204.png" /></p>
-<p>Allocating the IP address may take a moment. After a while, you can see that it has been assigned a private IP address.</p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%205.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%205.png" /></p>
-<p>To double check that the authorization was successful, return back to the <strong>ZeroTier Web Console</strong>. We can see that the number of <strong>Authorized Members</strong> has changed from 0 to 1.</p>
-<p><img alt="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20&amp;%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%206.png" src="6%20Install%20ZeroTier%20on%20your%20Linux%20VM%20%26%20join%20your%20pr%200386500313d146e689f5a9ccb6a47f6d/Untitled%206.png" /></p>
-<p>With that, we have connected the Linux VM to the private software-defined network.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2021/05/12/install_zerotier_on_your_linux_vm__join_your_private_network/">
+          Continue reading
+        </a>
+      </nav>
     
   </div>
 </article>
