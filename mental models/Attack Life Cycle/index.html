@@ -429,6 +429,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#big-picture-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big Picture First
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#direct-vs-indirect-access" class="md-nav__link">
     <span class="md-ellipsis">
       Direct vs Indirect Access
@@ -465,9 +474,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-signature-based-controls" class="md-nav__link">
+  <a href="#reduce-the-need-for-signature-based-controls" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Signature-based Controls
+      Reduce the need for Signature-based Controls
     </span>
   </a>
   
@@ -564,6 +573,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#big-picture-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big Picture First
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#direct-vs-indirect-access" class="md-nav__link">
     <span class="md-ellipsis">
       Direct vs Indirect Access
@@ -600,9 +618,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-signature-based-controls" class="md-nav__link">
+  <a href="#reduce-the-need-for-signature-based-controls" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoid Signature-based Controls
+      Reduce the need for Signature-based Controls
     </span>
   </a>
   
@@ -643,12 +661,13 @@
 
 <h1 id="attack-life-cycle">Attack Life Cycle</h1>
 <h2 id="attackers-rinse-repeat">Attackers RINSE &amp; repeat</h2>
-<p><img alt="" src="../../assets/AttackLifeCycle.png" /></p>
 <p><strong>For a successful attack, all three <code>conditions</code> depicted by the triangles must be met.️</strong></p>
-<blockquote>
-<p>A target is worthwhile when it has <code>Value &amp; Vulnerabilities</code>. 
-Whoever (aka Threat Actor) attacking it needs to reach the target's Attack Surface (the sum of all means) to exploit those vulnerabilities.</p>
-</blockquote>
+<ul>
+<li>A target is worthwhile when it has Value &amp; Vulnerabilities. </li>
+<li>Threat Actors need to reach the target's Attack Surface (the sum of all means) to exploit those vulnerabilities. </li>
+<li>Attackers need tools, techniques &amp; resources to mount an attack.</li>
+</ul>
+<p><img alt="" src="../../assets/AttackLifeCycle.png" /></p>
 <p>To meet these conditions, attackers need to perform:</p>
 <ul>
 <li><strong>R</strong>econnaissance - Gather information to assess <code>Value &amp; Vulnerabilities</code> that compound to <code>System Susceptibility</code></li>
@@ -659,21 +678,26 @@ Whoever (aka Threat Actor) attacking it needs to reach the target's Attack Surfa
 <blockquote>
 <p>To effectively counteract potential attacks, identifying and disrupting the appropriate conditions is crucial. However, <strong>determining which condition(s) to prioritise can be a complex decision.</strong>️</p>
 </blockquote>
-<p>Let's examine the process from the standpoint of an adversary.️</p>
+<h2 id="big-picture-first">Big Picture First</h2>
+<p>It is not surprising that even security professionals who are deep into their security domains may not fully aware of the necessary &amp; sufficient conditions of attacks &amp; missing a bigger picture due to bias &amp; assumptions.</p>
+<p>This model provides links between defensive concepts &amp; considerations with offensive phases, for both business &amp; technical executives:
+<img alt="" src="../../assets/ALCandConsiderations.png" /></p>
+<p>First, we examine the process from the standpoint of an adversary.️</p>
 <h2 id="direct-vs-indirect-access">Direct vs Indirect Access</h2>
 <p><img alt="" src="../../assets/direct.png" />
 An example of direct access from <code>1.Recon</code> to <code>4.Execute Objectives</code>: <em>Poor web-server configuration leads to exposure of unprotected sensitive files that can be downloaded by anyone.</em> <strong>Low hanging fruits for adversaries!</strong> </p>
 <p><img alt="" src="../../assets/indirectAccess.png" />
 From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use LinkedIn to figure out who are the HR executives, send deceptive emails to lure them (Phishing) to click on malicious links or execute malware. <em>Just need one employee to give attackers that chance to gain control over a HR asset when the malware infects like a</em> <code>Patient Zero</code> <em>&amp; persists within that endpoint</em>. <strong>Why go through all that trouble when attackers can buy access into corporate Virtual Private Network?</strong></p>
 <p><img alt="" src="../../assets/exposureFlow.jpeg" /></p>
-<p>The flow chart covers both direct &amp; indirect access. The attackers have the skills to carry out intrusions from either way. Internet gives them the access to reach vulnerable assets &amp; victims, otherwise attackers have to be physical present or near the targets.</p>
+<p>The flow chart covers both direct &amp; indirect access. The attackers have the skills to carry out intrusions from either way. Internet gives them the access to reach vulnerable assets &amp; victims, otherwise attackers need to be physically present or near targets.</p>
 <blockquote>
 <p>Attacks are effective only when all conditions are fulfilled, yet it will fail if any single condition is disrupted. For instance, when employees are vigilant, they report the phishing emails. With robust multi-factor VPN authentication, 1st factor of ID &amp; password sold on dark web is less threatening.</p>
 </blockquote>
 <h2 id="disrupt-attacks-by-design">Disrupt Attacks by Design</h2>
-<p>Instead of reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, automatic updates that <strong>disrupted millions of Windows hosts.</strong> Basically stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.</p>
+<p>Instead of reacting to yet another vulnerability announcement, another patching exercise (e.g. Microsoft Patch Tuesday) or worst, automatic updates that <strong>disrupted millions of Windows hosts.</strong> </p>
+<p>The majority are either oblivious or disbelieving of the fact that they can be under attack, or aware but stuck in a <strong>Chase-After-Bad posture, which is unending &amp; costly</strong>.</p>
 <p><img alt="" src="../../assets/hamster-wheel.gif" /></p>
-<p>An effective lesson plan for my interns to learn about Threat Accessibility &amp; privileged administrator access: </p>
+<p><a href="https://jymcheong.notion.site/Why-focus-on-Attack-Surface-Experience-SSHD-brute-force-e8451949623842539346d15e270ac094?pvs=4">My interns (unaware but curious) learnt about Threat Accessibility</a> &amp; managing privileged administrator access through this lesson plan:</p>
 <ul>
 <li>Sign up a free cloud Linux server.</li>
 <li>Start the virtual Linux server &amp; use a strong password.</li>
@@ -682,49 +706,43 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 <li><em>They will notice that within a short while, many failed secure shell or SSH attempts will start appearing in that console session earlier.</em></li>
 </ul>
 <blockquote>
-<p>If the system allowed root (super-user) access via SSH (secure shell access) with weak passwords, brute-force attacks could have resulted in successful admin logins.️</p>
+<p>Weak passwords used for remote root access in Linux systems increase the risk of successful brute-force login attacks.️</p>
 </blockquote>
 <ul>
-<li>I direct them to a couple of free private network (similar to Virtual Private Network but different in terms of network architecture) like <a href="https://www.zerotier.com">ZeroTier</a> &amp; <a href="https://www.twingate.com">Twingate</a>.</li>
-<li>They reconfigured secure shell server to <strong>only accept connections from the same private network</strong>.</li>
-<li><strong>NO MORE brute-force attempts.</strong></li>
-<li><strong>Even if the passwords were weak, attackers cannot reach the server to test it.</strong> </li>
+<li>I directed them to some free Virtual Private Networks like <a href="https://www.zerotier.com">ZeroTier</a> &amp; <a href="https://www.twingate.com">Twingate</a>.</li>
+<li>The students reconfigured their servers to <strong>only accept connections from the same private network</strong>.</li>
+<li><strong>NO MORE brute-force attempts. Even if the passwords were weak, attackers cannot reach those servers to test it.</strong> </li>
 </ul>
 <blockquote>
 <p>Designing with Threat Accessibility in mind enables us to disrupt attacks effectively while maintaining both usability and security.️ </p>
 </blockquote>
 <p>What about the other two conditions; <code>System Susceptibility &amp; Threat Capabilities</code> ? </p>
 <p><strong>They contribute to the unending Chase-After-Bad posture!</strong></p>
+<p><em>Getting rid of vulnerabilities</em> by patching is an impossible task. </p>
 <ul>
-<li><em>Getting rid of vulnerabilities</em> by patching is an impossible task. <strong>I'm not suggesting "don't need to patch", but we have to exercise caution and careful consideration before implementing any changes to production systems.️</strong><ul>
-<li>Hypothetically, if Windows were free of bugs, there would still be numerous system tools &amp; mechanisms susceptible to misuse by attackers.</li>
-<li>Those are inherent features rather than defects. Complex operating systems, including Windows, Linux, MacOS &amp; mobile ones, are all have such vulnerabilities.️</li>
-<li><em>Vulnerabilities cover both software bugs &amp; poorly designed features that can be abused.</em></li>
+<li><em>Vulnerabilities is not limited to software bugs, but include poorly designed features that can be abused.</em></li>
+<li>Even if hypothetically Windows were free of bugs, there are numerous system tools &amp; mechanisms susceptible to misuse by attackers.</li>
+<li>Complex operating systems, including Linux, MacOS &amp; mobile ones, are all have such vulnerabilities.️</li>
+<li><strong>I'm not suggesting "don't need to patch", but we have to exercise caution and careful consideration before implementing any changes to production systems.️</strong></li>
 </ul>
-</li>
-<li>Threat actors are extremely motivated, creative &amp; resourceful. <strong><em>They use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</em></strong> <strong>We have NO control over this aspect.</strong>
-<img alt="" src="../../assets/ironDome.jpeg" /></li>
-</ul>
+<p>Threat actors are extremely motivated, creative &amp; resourceful. <strong><em>They often use free or cheap tools to evade costly controls &amp; monitoring operations at a fraction of the cost!</em></strong> 
+<img alt="" src="../../assets/ironDome.jpeg" /></p>
 <h2 id="avoid-single-factor-authentication">Avoid Single-Factor Authentication</h2>
+<p>Single-factor authentication refers to the process of verifying identity through the use of one identifier, such as an email address or username, coupled with a password.️ </p>
+<p><strong>Upon obtaining these credentials, there is a significant risk that password reuse will grant Threat Actors access to other services for affected users.️</strong></p>
 <blockquote>
-<p>Single-factor authentication refers to the process of verifying identity through the <strong>use of one identifier, such as an email address or username, coupled with a password</strong>.️ Upon obtaining these credentials, there is a significant risk that password reuse will grant Threat Actors access to other services for affected users.️</p>
-</blockquote>
-<p>As <a href="./#direct-vs-indirect-access-to-objectives">illustrated earlier</a>:</p>
-<ul>
-<li>Malicious actors have the ability to gain unauthorised access to email accounts and assume control over online identities.️</li>
-<li>A corporate VPN relying on single-factor authentication grants attackers unfiltered access to an organization's internal resources.️</li>
-</ul>
 <p>We can disrupt such unauthorised access with either Multi-Factor authentication or <a href="https://fidoalliance.org/passkeys/">replacing passwords with passkeys</a>.</p>
+</blockquote>
 <h2 id="avoid-admin-ports-exposure">Avoid Admin Ports Exposure</h2>
 <blockquote>
-<p>Admin access ports like SSH, RDP, VNC should never be accessible over the Internet. Even access to web admin pages should be limited to few IP addresses whenever possible.</p>
+<p>Admin access through ports like SSH, RDP, VNC should never be exposed over the Internet. Even web admin pages should be limited to a small set of fixed Internet Protocol addresses whenever possible.</p>
 </blockquote>
-<p>There are many freemium software private networks like ZeroTier, Twingate, Tailscale &amp; the likes to limit access. <strong>Instead of using public Internet address, simply configure such remote admin services to use private network address accessible to a few admin endpoints.</strong></p>
-<h2 id="avoid-signature-based-controls">Avoid Signature-based Controls</h2>
+<p>There are many freemium software private networks like ZeroTier, Twingate, Tailscale &amp; the likes to limit access. <strong>Instead of using public Internet address, simply configure such remote admin services to use private network address accessible to a few admin endpoints, just like what my interns did.</strong></p>
+<h2 id="reduce-the-need-for-signature-based-controls">Reduce the need for Signature-based Controls</h2>
 <blockquote>
 <p>The Crowdstrike Channel File incident is a prime example of Signature-based control. Updates are needed to counter whatever new offensive techniques. </p>
 </blockquote>
-<p>These controls are primarily designed to counteract attack techniques and address hosts or network vulnerabilities. Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️ <strong>Malware &amp; offensive techniques are part of an infinite set, such controls will never keep up.</strong></p>
+<p>Due to the ever-evolving nature of offensive tactics &amp; techniques, continuous updating signatures is essential to keep pace with new threats - thereby classified as reactive or Tit-for-Tat controls.️ <strong>Malware &amp; offensive techniques are part of an infinite set, such controls will never keep up.</strong></p>
 <p>More examples of Signature-based Tit-for-Tat Controls (non-exhaustive) :</p>
 <ul>
 <li>Anti-virus</li>
@@ -737,10 +755,10 @@ From <code>1.Recon</code> to <code>2.Infiltrate Networks</code>: Attackers use L
 <h2 id="recap">Recap</h2>
 <ul>
 <li>Attackers will RINSE &amp; repeat within this Attack Life Cycle.</li>
-<li>They can attack <em>directly</em> at services or <em>indirectly</em>, by getting into target networks &amp; work their way within to meet their offensive objectives (steal, tamper &amp; deny access to data &amp; systems).</li>
-<li>Although network attacks seem like a very complex topic, there are only three conditions necessary for any successful attacks.</li>
-<li>It is sufficient to disrupt attack by dealing with any one of the conditions, but keeping up with system vulnerabilities by patching &amp; changing offensive techniques is very difficult for us.</li>
-<li><strong>We can disrupt attacks by design to make systems usable &amp; accessible to legitimate users but much harder to intrude, instead of just reacting to vulnerabilities &amp; threat techniques.</strong></li>
+<li>They can attack <em>directly</em> at services or <em>indirectly</em>, by getting into target networks &amp; work their way within to meet their offensive objectives (steal, tamper &amp; deny access to data or systems).</li>
+<li>Although cyber attacks seem like a very complex topic, there are only three conditions necessary for any successful attacks.</li>
+<li>It is sufficient to disrupt attack by dealing with any one of the conditions, but keeping up with system vulnerabilities by patching, paying for more controls to address ever changing offensive techniques is unsustainable.</li>
+<li><strong>We can disrupt attacks by design to make systems usable &amp; accessible to legitimate users but much harder &amp; costly for attackers, instead of just reacting to vulnerabilities &amp; threat techniques.</strong></li>
 <li>A <a href="/blog/2024/08/31/you_dont_need_windows_network/">concrete scenario</a> was used to illustrate how it can be done.</li>
 </ul>
 
