@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jymcheong.github.io/blog/category/under-dogs/</loc>
+         <lastmod>2024-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jymcheong.github.io/blog/category/dotnet/</loc>
          <lastmod>2024-08-24</lastmod>
          <changefreq>daily</changefreq>
