@@ -824,35 +824,13 @@
     <h2 id="memgraph"><a class="toclink" href="../../2024/08/24/memgraph/">Memgraph</a></h2>
 <h3 id="tldr"><a class="toclink" href="../../2024/08/24/memgraph/#tldr">TL;DR</a></h3>
 <p>Performant, excellent documentation, easy to deploy, Neo4j compatible (both queries &amp; client drivers) &amp; even supports custom functions with Python, along with C/C++ &amp; Rust! </p>
-<h3 id="getting-started"><a class="toclink" href="../../2024/08/24/memgraph/#getting-started">Getting Started</a></h3>
-<p>Fire up console: <code>curl -sSf "https://install.memgraph.com" | sh</code></p>
-<p>Things can screw up... </p>
-<ul>
-<li>in my case port 3000 was in use, web UI frontend won't start</li>
-<li>Bring it down with <code>docker-compose down</code> within the <code>~/memgraph-platform</code></li>
-<li>Edit <code>docker-compose.yml</code>, change <code>3000:3000</code> to <code>3030:3000</code> or whatever not used</li>
-<li>Run <code>docker-compose up -d</code>, everything should work</li>
-</ul>
-<h3 id="well-designed-onboarding-experience"><a class="toclink" href="../../2024/08/24/memgraph/#well-designed-onboarding-experience">Well Designed Onboarding Experience</a></h3>
-<p>I have tinkered with Neo4J, OrientDB, FalkorDB, DGraph... but I like this the most so far because...
-<img alt="" src="../../assets/mg1.png" /></p>
-<p>Conforms to good UX principles from Prof Shneiderman's Visual Information Seeking Mantra:</p>
-<blockquote>
-<p>Overview (first) &gt; Zoom &amp; Filter &gt; Details on demand</p>
-</blockquote>
-<p>In this case, it didn't just load some arbitrary data &amp; leave the user clueless. You can see basic schema of this data-set (top) &amp; overview of the data-set:
-<img alt="" src="../../assets/mg2.png" /></p>
-<p>Providing a set of queries for exploration (<em>Details on Demand</em>):
-<img alt="" src="../../assets/mg3.png" /></p>
-<p>UI actually warns about the large returned data-set &amp; asked if we want to proceed! Nice!</p>
-<p>For those into more advanced stuff: https://memgraph.com/docs/advanced-algorithms/available-algorithms/node2vec</p>
-<h3 id="improving-deployment-experience"><a class="toclink" href="../../2024/08/24/memgraph/#improving-deployment-experience">Improving Deployment Experience</a></h3>
-<ul>
-<li>Avoid hard-coding port values within <code>docker-compose.yml</code>.</li>
-<li>Deployment scripting should check for port availability especially for frontend since every other frontend love <code>3000</code>!</li>
-<li>Script will then pick available port, write into a <code>.env</code> &amp; <code>docker-compose.yml</code> reference environment variable.</li>
-<li>Of course once container started, <strong>SHOW the frontend URL &amp; further instructions clearly!</strong></li>
-</ul>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/08/24/memgraph/">
+          Continue reading
+        </a>
+      </nav>
     
   </div>
 </article>
