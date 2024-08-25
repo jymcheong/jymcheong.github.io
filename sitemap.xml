@@ -2,97 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jymcheong.github.io/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/About%20Jym/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/2024/08/17/you_dont_need_windows_network/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/2024/08/19/net_bloat/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/2021/05/12/install_zerotier_on_your_linux_vm__join_your_private_network/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/2024/08/24/memgraph/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/mental%20models/Attack%20Life%20Cycle/</loc>
-         <lastmod>2024-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jymcheong.github.io/mental%20models/TTPs/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/archive/2021/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/graph-db/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/memgraph/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/orientdb/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/under-dogs/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/dotnet/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/attack-life-cycle/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/mental-models/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jymcheong.github.io/blog/category/zerotier/</loc>
-         <lastmod>2024-08-24</lastmod>
+         <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
