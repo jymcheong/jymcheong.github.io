@@ -913,59 +913,65 @@
 <li><strong>Stage 1 directly to 4 happens with low hanging fruits like poor configurations, exposed service network ports with default, stolen or weak passwords, attackers get lucky &amp; completes objectives without much effort.</strong></li>
 </ul>
 <h2 id="tactic-needs-techniques">Tactic needs Techniques</h2>
+<p>I will use a <a href="../../blog/2024/08/17/you_dont_need_windows_network/">case study of a hypothetical law firm's Ransomware incident</a> to illustrate the various offensive tactics:</p>
 <table>
 <thead>
 <tr>
 <th>Tactics</th>
-<th>Examples of Techniques &amp; Tools</th>
-<th>Vulnerabilities Samples</th>
+<th>Techniques &amp; Tools</th>
+<th>Vulnerabilities</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>External Recon <em>(Gather Info)</em></td>
-<td><a href="https://www.shodan.io">Shodan</a> is search engine for internet-connected devices.<br><br>Burp Suite a proprietary software tool for security assessment and penetration testing of web applications.<br><br><a href="https://github.com/anasbousselham/fortiscan">Fortiscan</a> , a specific vulnerability scanner for FortiGate SSL-VPN.</td>
-<td>Default passwords, example web-camera systems, Internet routers...<br><br><br>Vulnerable WordPress (a popular web Content Management System)<br><br><br><br>Vulnerability that allow unauthenticated attacker to change password of a SSL VPN web portal user (<strong>CVE-2018-13382</strong> is a distinct vulnerability identifier assigned by by the MITRE Corporation and a network of authorised organisations known as CVE Numbering Authorities (CNAs).).<br></td>
+<td>A Ransomware targeting legal industry found Ace Legal LLP's support email credentials from a Dark Web forum exposure.<br></td>
+<td>Online services using just user-ID &amp; password are susceptible to attacks like identity theft.</td>
 </tr>
 <tr>
 <td>Payload Delivery<br><em>(Get in)</em></td>
-<td><a href="https://www.metasploit.com">Metasploit</a> possibly the world most popular opensource penetration testing software.<br><br>Using the earlier FortiGate vulnerability, one can find a payload generator for the specific CVE.<br><br><strong>There are many free &amp; opensource tools to generate &amp; deliver payloads.</strong> The FortiGate is a service-side example, sending malicious emails is the most commonly used approach to infiltrate client side, especially Windows.</td>
-<td>For ease of remote management &amp; also a weak default configuration that exposes such management interfaces to the Internet. <br><br><br>Lack multi-factor authentication to access such sensitive management interfaces.<br><br></td>
+<td>Using the stolen support credentials, attackers manage to use a Zero-Click vulnerability to deliver malware to Ace Legal support desktop computer that runs 24/7, <strong>without the need for any victim interaction</strong>.</td>
+<td>There are a few <strong>Zero-Click</strong> Outlook vulnerabilities over the years. <br><br></td>
 </tr>
 <tr>
 <td>Code Execution<br><em>(Get in)</em></td>
-<td>Using Metasploit or equivalent, attackers generate payloads that run arbitrary malicious codes on targets. They often test payloads against well-known signature-based products before the campaign, ensure they will be undetected.<br><br>For the case of service-side vulnerabilities like FortiGate, the service port receives payloads &amp; reacts by running malicious to typically call back to attackers' infrastructure.<br><br>For client-side like a Windows network, malware which is short form of malicious software, is the most prevalent method of running malicious code.  <br><br>Abusing system tools (aka Living-Off-the-Land or LOL) to evade Anti-Virus &amp; other host detection products is also becoming a norm as more companies adopt detection controls like Endpoint Detection &amp; Response of EDR.</td>
-<td>Lack of vulnerability management &amp; preventive or corrective actions like restricting access (e.g. with Firewall) or patching.<br><br><br>Even if Windows had no vulnerabilities related to software bugs, there are plenty of legit features that can be abused to achieve the next tactic of malicious Code Execution.<br><br></td>
+<td>Malicious software or malware launches unhindered within that desktop computer.<br><br>The initial execution will typical download more payloads like backdoor installer &amp; reports back to attackers' infrastructure known as Command &amp; Control servers.</td>
+<td>Most Anti-Virus products are ineffective against custom malware used by organised &amp; skilled criminals.<br><br></td>
 </tr>
 <tr>
 <td>Remote Command &amp; Control (C2)<br><em>(Get in)</em></td>
-<td>Most of these malware &amp; whatever offensive file-less techniques will report back to attackers infrastructure that further install backdoors into the target system.<br><br>For the case of service-side &amp; Linux servers, WebShells are common &amp; for Windows clients, malware or file-less techniques all tend to report back to C2 over <strong>encrypted</strong> &amp; common protocol like HTTPS (either SSL/TLS) <strong>because it is widely used (blending in) &amp; unlikely blocked by firewalls.</strong></td>
-<td>Firewalls may be useful for incoming blocks but it can challenging to define granular egress (outbound) rules especially for larger networks.<br><br>Once malicious code runs &amp; reports back, it provides a control channel for adversaries to issue commands to run on compromised assets, which often act as pivots into the internal zones.</td>
+<td>A C2 server provides Threat Actors some form of C2 interface for them to remotely control the initial compromised asset, in this case the support desktop.</td>
+<td>Firewalls may be useful for incoming blocks but most malware egress with HTTPS protocol, which is by default <br>unblocked otherwise users within the network won't be able to use their web browsers.</td>
 </tr>
 <tr>
 <td>Persistent Backdoor<br><em>(Get in)</em></td>
-<td>Attackers need a backdoor just in case the machine or device reboots or shutdown. The term "Persistent" means this backdoor will report back to C2 infrastructure again, to resume control sessions for attackers.<br><br>Malware is commonly used in Windows, Linux, MacOS, Android &amp; even Apple iOS. The only difference is that the difficulty &amp; cost with the last being most expensive!<br><br>There are also "file-less" backdoors that basically abuse system features &amp; functionalities to achieve such "Persistence".</td>
+<td>There's a chance of shutting down or reboot for computers or any networked electronic device. A backdoor is a special malware that lets attackers resume C2 session even after a reboot. <br></td>
 <td><strong>Many businesses DON'T have the budget for security monitoring service.</strong><br><br>It is almost certain that criminals will test their payloads against popular security products before a campaign. <strong>This means most backdoors are installed without being detected.</strong><br><br><strong>At this point, attackers is ready to move on to the next stage of Attack Life Cycle: Spreading Laterally!</strong></td>
 </tr>
 <tr>
 <td>Internal Recon<br><em>(Stay in)</em></td>
-<td>Unlike external reconnaissance, attackers have the option to survey the internal network zones &amp; within the compromised asset.<br><br>It's like getting a beach head into a virtual territory. Attackers have options to survey the compromised hosts or just start scanning networks to figure out the next steps.</td>
-<td>There are lots of commands within various Operating Systems (OS) to gather information.<br><br>Though such commands are not exactly vulnerabilities, <strong>it is hard to distinguish between user or attacker even if audit events are sent to a monitoring service.</strong><br><br></td>
+<td>Ace Legal's support desktop computer was connected to their file cum printer server.<br><br>Threat Actors did not bother to scan further since they found the file server that had lots of archived documents.</td>
+<td>It was a lucky day for this ransomware gang since that computer connects directly to file server that archives.<br><br></td>
 </tr>
 <tr>
 <td>Credential Capture or Abuse<br><em>(Stay in)</em></td>
-<td>There are no shortage of tools to extract OS wifi passwords, browser session cookies, credentials &amp; even email passwords. <br><br>For example in Windows, it's also trivial to fake a logon or email retype password prompt &amp; most users will happily comply.</td>
-<td>For user touch points, there are also <strong>numerous ways to extract credentials</strong> like usernames &amp; passwords from such endpoints.</td>
+<td>Since it was a small network of 5 computers, there wasn't a Domain Controller or Domain Administrator as targets.</td>
+<td>The support terminal was NOT used to access their Practice Management Software-as-a-Service portal, otherwise attackers could steal session token &amp; assume access into more sensitive information.</td>
 </tr>
 <tr>
 <td>Privilege-Escalation<br><em>(Stay in)</em></td>
-<td>For networks that allow users to run as Local Admins (Windows) or Sudoers (Linux), there are also many free tools &amp; techniques to escalate privilege. Doing so allows attackers to install higher privilege backdoors &amp; extract more secrets or sensitive information.</td>
-<td>Even for networks that only runs Standard Users for client zones, <strong>unpatched &amp; vulnerable endpoints are common</strong> such that attackers can escalate  privileges.</td>
+<td>Attackers easily escalate to Local Admin &amp; starts another privileged session &amp; installs a new backdoor with higher privilege.</td>
+<td>Everyone was using accounts that are in the Local Administrator group but...</td>
 </tr>
 <tr>
 <td>Lateral Movement or Internal C2<br><em>(Stay in)</em></td>
-<td>Lateral Movement in simple terms is about attackers moving from one compromised asset to another.<br><br>In a Windows network, attackers almost certainly aim for Active Directory services &amp; capture Domain Admin privilege. And once captured, attackers have full internal Command &amp; Control over the whole network.<br><br>For other networks like Internet-of-Things or even cloud services, attackers aim to infiltrate into management platform. For networks based on hub-&amp;-spoke model, getting to the central hub gives further access to the rest of the network.</td>
-<td>This is a <a href="https://www.hackthebox.com/storage/press/samplereport/sample-penetration-testing-report-template.pdf">sample report</a> that covered infiltration to Domain compromised. <br><br><strong>The penetration testers had effectively taken over the entire Windows network.</strong><br><br>In another simpler scenario, I discussed how a hypothetical <a href="./Client zone without Windows.md">legal firm leveraged Design Think &amp; Attack Life Cycle mental model</a> to evaluate their tech refresh planning.</td>
+<td>Lateral Movement in simple terms is about attackers moving from one compromised asset to another.<br><br>With the stolen support account credentials, easily access their file servers.</td>
+<td>Fortunately for Ace Legal, all other laptops within the network was either sleeping or out of premise for most of the time.<br><br>In the case of Ace Legal, the network is a simple small network. The attackers did not bother to stay within for too long.</td>
+</tr>
+<tr>
+<td>Steal files &amp; Deny Access<br><em>(Complete Objectives)</em></td>
+<td>Double-extortion is a means to force the victims who refuse to pay to unlock their assets by revealing or selling stolen files in the public or other criminal forums.</td>
+<td>Ace Legal used a strong password convention on all archived documents. So the stolen files are inaccessible. <br><br>Only support desktop was locked by the ransomware. The victims did not bother to pay up since their IT service provider managed to recover it quickly &amp; changed support account password.</td>
 </tr>
 </tbody>
 </table>
