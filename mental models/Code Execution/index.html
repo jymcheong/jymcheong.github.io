@@ -916,21 +916,27 @@
 <p>All of these aspects are related to analytics, but it really just boils down to how we ask forensical questions.</p>
 <h3 id="fore-vs-background-process">Fore vs background process</h3>
 <blockquote>
-<p>"Process" refers to the running memory instance of a program stored on disk.
-- Most sneaky backdoors are background processes within user touch-points for obvious reasons.
-- Most user-zone infiltrations tend to involve users' interactions or involvement e.g. email phishing.
-- Server side infiltration however could be a chain of background processes, starting from a vulnerable listening process, triggered to download &amp; run malicious codes.
-- Beyond parent-child process relationship, there's analytical value in tracking the transition from foreground to background spawning e.g. a foreground MS Office process spawned a background powershell process.
-- Play a role in discerning remote attack from insider actions for critical infrastructure environment, especially when we are able to track at both OS &amp; secure KVM level (e.g. session recording).</p>
+<p>"Process" refers to the running memory instance of a program stored on disk.</p>
+</blockquote>
+<ul>
+<li>Most sneaky backdoors are background processes within user touch-points for obvious reasons.</li>
+<li>Most user-zone infiltrations tend to involve users' interactions or involvement e.g. email phishing.</li>
+<li>Server side infiltration however could be a chain of background processes, starting from a vulnerable listening process, triggered to download &amp; run malicious codes.</li>
+<li>Beyond parent-child process relationship, there's analytical value in tracking the transition from foreground to background spawning e.g. a foreground MS Office process spawned a background powershell process.</li>
+<li>Play a role in discerning remote attack from insider actions for critical infrastructure environment, especially when we are able to track at both OS &amp; secure KVM level (e.g. session recording).</li>
+</ul>
+<blockquote>
 <p>This process attribute is unfortunately not native to Windows, unlike Linux (e.g. tty, SessionID) &amp; MacOS that have fields in audit logs to infer whether it is a back/foreground process. We had to engineer it ourselves for Windows.</p>
 </blockquote>
 <h3 id="before-vs-after-logon-session">Before vs After Logon Session</h3>
 <blockquote>
-<p>Timing &amp; sequence matter. For instance...
-- A vulnerable server with Log4j listens on an exposed port, attacker sends it a payload that triggers a string of all background processes without anyone signing into the server...
-- Windows Sticky Keys backdoor launches a SYSTEM cmd.exe <em>before</em> any valid user logon.
-- A email phishing victim, can only be a victim after he or she logon &amp; interacts with some malicious contents that seems normal but runs abnormal hidden processes...</p>
+<p>Timing &amp; sequence matter. For instance...</p>
 </blockquote>
+<ul>
+<li>A vulnerable server with Log4j listens on an exposed port, attacker sends it a payload that triggers a string of all background processes without anyone signing into the server...</li>
+<li>Windows Sticky Keys backdoor launches a SYSTEM cmd.exe <em>before</em> any valid user logon.</li>
+<li>A email phishing victim, can only be a victim after he or she logon &amp; interacts with some malicious contents that seems normal but runs abnormal hidden processes...</li>
+</ul>
 <p>We can contrast &amp; visualize all that like this:
 <img alt="" src="../../assets/fore-background.png" /></p>
 <h3 id="cross-process-egress-activities">Cross-Process &amp; Egress Activities</h3>
