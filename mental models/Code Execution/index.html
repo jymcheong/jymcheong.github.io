@@ -1003,28 +1003,34 @@
 </tbody>
 </table>
 <h2 id="anti-virus-bad-listing">Anti-Virus (Bad-listing)</h2>
-<p>The problems with traditional signature-based Anti-Virus...
-- Mutating &amp; evasions are essentially free thanks to numerous public repositories &amp; tools.
-- Updating signatures is a continuous process that many environments can't achieve (e.g. OT networks that are adverse to changes and updates).
-- Not effective against Type 2 techniques.
-- Totally useless against 0-day exploits (Type 3).</p>
+<p>The problems with traditional signature-based Anti-Virus...</p>
+<ul>
+<li>Mutating &amp; evasions are essentially free thanks to numerous public repositories &amp; tools.</li>
+<li>Updating signatures is a continuous process that many environments can't achieve (e.g. OT networks that are adverse to changes and updates).</li>
+<li>Not effective against Type 2 techniques.</li>
+<li>Totally useless against 0-day exploits (Type 3).</li>
+</ul>
 <blockquote>
 <p>Contemporary antivirus companies mostly pivoted to behavior-based detection that identify threats based on actions and system modifications rather than relying solely on file signatures, enabling detection of fileless and non-PE attack vectors.</p>
 </blockquote>
 <p>But the general approach still revolves around offensive behaviors &amp; signatures. <em>The next type of controls focuses on allow-listing...</em></p>
 <h2 id="app-control-good-listing">App Control (Good-listing)</h2>
-<p>Application-Control in principle works well to deny Type 1 since malicious PE files are part of an potentially infinite set. But there are numerous loop-holes in practice... 
-- DLL checking is turned off as it is very resource intensive.
-- Plenty of DLL loading methods which are <em>mostly Type 2 methods to get around App Control reliably</em>.
-- Managing allowed-lists in certain environments can be challenging.</p>
+<p>Application-Control in principle works well to deny Type 1 since malicious PE files are part of an potentially infinite set. But there are numerous loop-holes in practice... </p>
+<ul>
+<li>DLL checking is turned off as it is very resource intensive.</li>
+<li>Plenty of DLL loading methods which are <em>mostly Type 2 methods to get around App Control reliably</em>.</li>
+<li>Managing allowed-lists in certain environments can be challenging.</li>
+</ul>
 <blockquote>
 <p>Microsoft's implementations are fragmented. Software Restriction Policy was officially deprecated in 2020 and completely stopped functioning in Windows 11 22H2 fresh installations, though upgraded systems retained limited functionality. Microsoft explicitly recommended transitioning to AppLocker or Windows Defender Application Control (WDAC) as replacements.</p>
 </blockquote>
 <h2 id="edr-only-as-secure-as-windows-inherent-vulnerabilities">EDR (only as secure as Windows' inherent vulnerabilities)</h2>
-<p>EDR (along with all host controls) security is only as strong as Windows' inherent vulnerabilities allow:
-- Type 1 malware can bypass monitoring hooks through direct syscalls, kernel callbacks evasion, and API unhooking.
-- A recent example of Type 2 technique is <code>EDR-Freeze</code> disclosed in September 2025 by security researcher TwoSevenOneThree (Zero Salarium) that suspends EDR and antivirus processes indefinitely by abusing Windows Error Reporting (WER) system components. 
-- Type 3 methods like 0-day exploits (e.g. UEFI rootkit BlackLotus) may achieve execution before EDR or totally disarm EDR drivers.</p>
+<p>EDR (along with all host controls) security is only as strong as Windows' inherent vulnerabilities allow:</p>
+<ul>
+<li>Type 1 malware can bypass monitoring hooks through direct syscalls, kernel callbacks evasion, and API unhooking.</li>
+<li>A recent example of Type 2 technique is <code>EDR-Freeze</code> disclosed in September 2025 by security researcher TwoSevenOneThree (Zero Salarium) that suspends EDR and antivirus processes indefinitely by abusing Windows Error Reporting (WER) system components. </li>
+<li>Type 3 methods like 0-day exploits (e.g. UEFI rootkit BlackLotus) may achieve execution before EDR or totally disarm EDR drivers.</li>
+</ul>
 <blockquote>
 <p>When the EDR missed the malicious code that disabled it, that endpoint visibility is totally compromised. Attackers still get around anti-tampering mechanisms like Early Launch Anti-Malware (ELAM) and Kernel-Level protections, by abusing many vulnerable but signed drivers that are out there. Bear in mind that not all EDR solutions are ELAM certified. </p>
 </blockquote>
