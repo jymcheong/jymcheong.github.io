@@ -1070,7 +1070,7 @@
 <p><em>When users can write/change those files, so can attacker's malicious processes, which tend to run in user's context during initial intrusion.</em> When that happens:</p>
 </blockquote>
 <ul>
-<li>All files created by Standard Users' processes, are owned by the respective user.</li>
+<li>All files created by Standard Users' processes, are owned by the user/victim.</li>
 <li>Conversely, all centrally deployed files are typically owned by <code>SYSTEM</code>, <code>TrustedInstaller</code> &amp; <code>Administrators Group</code>. E.g. Programs that are installed in <code>C:\Program Files...</code></li>
 </ul>
 <p>The exception to default file-ownership behavior is under certain UAC setting for Local Admin &amp; Domain Admin, where written files are immediately owned by <code>Administrators Group</code>.</p>
