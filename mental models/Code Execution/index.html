@@ -1020,6 +1020,7 @@
 <li>DLL checking is turned off as it is very resource intensive.</li>
 <li>Plenty of DLL loading methods which are <em>mostly Type 2 methods to get around App Control reliably</em>.</li>
 <li>Managing allowed-lists in certain environments can be challenging.</li>
+<li>Going file-less (using Type 2 or 3 techniques) can easily reuse malicious DLL but loading directly to memory without writing to disks</li>
 </ul>
 <blockquote>
 <p>Microsoft's implementations are fragmented. Software Restriction Policy was officially deprecated in 2020 and completely stopped functioning in Windows 11 22H2 fresh installations, though upgraded systems retained limited functionality. Microsoft explicitly recommended transitioning to AppLocker or Windows Defender Application Control (WDAC) as replacements.</p>
