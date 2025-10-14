@@ -1085,7 +1085,7 @@
 <blockquote>
 <p>Using granular process profiling, we can effectively isolate the network and cross-process access by disrupting the new process profile that deviates from our baseline.</p>
 </blockquote>
-<p>By extending ideas from Application Control, we can achieve a granular profile of existing processes that egress and access memory across processes. However, the "coarse" host firewall rules are not sufficient because they typically focus on either the destination or the program path. In this case, MSHTA.exe is a legitimate system program. There are numerous system binaries that we might not want to block network access for.</p>
+<p>"Coarse" host firewall rules are not sufficient because they typically focus on either the destination or the program path. In this case, MSHTA.exe is a legitimate system program. There are numerous system binaries that we might not want to block network access for. By extending ideas from Application Control, we can achieve a granular profile of existing processes that egress and access memory across processes. </p>
 <p>My <a href="https://github.com/jymcheong/ETW-tutorialSet/tree/main/ETW%20Helper%20Class">ETW series</a> delves deeper into this topic and provides code-level explanations of how we can achieve this granular profiling.</p>
 <h3 id="what-is-moving-target-why-it-matters">What is Moving-Target &amp; Why it matters?</h3>
 <p>Remember the CrowdStrike incident? A single mistake with a specific low-level resource file consumed by a kernel driver caused almost a global outage.</p>
