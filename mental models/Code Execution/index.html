@@ -1074,6 +1074,22 @@
 </blockquote>
 <p>By extending ideas from Application Control, we can achieve a granular profile of existing processes that egress and access memory across processes. However, the "coarse" host firewall rules are not sufficient because they typically focus on either the destination or the program path. In this case, MSHTA.exe is a legitimate system program. There are numerous system binaries that we might not want to block network access for.</p>
 <p>My ETW series delves deeper into this topic and provides code-level explanations of how we can achieve this granular profiling.</p>
+<h3 id="what-is-moving-target-why-it-matters">What is Moving-Target &amp; Why it matters?</h3>
+<p>Remember the CrowdStrike incident? A single mistake with a specific low-level resource file consumed by a kernel driver caused almost a global outage.</p>
+<p>While causing an outage that is hard to recover may not be beneficial for criminals at large, abusing Windows' inherent weaknesses by exploiting vulnerable drivers to disable EDR, AV, or App Control can be quite useful. This phenomenon is known as Bring-Your-Own-Vulnerable Driver (BYOVD).</p>
+<p>In the past, there were some barrier to entry for such disabling of host control as it still required some skills. But it has now become commoditized &amp; accessible to low to mid skilled criminals. </p>
+<blockquote>
+<p>The core issue is that most product are very static in nature &amp; there are many ways to disable them despite having anti-tampering in place. This perpetuates the unending cycle of updates to deal with this cat-&amp;-mouse game.</p>
+</blockquote>
+<p>Moving-Target approach is somewhat a fight fire with fire approach. One approach would be to ditch traditional kernel driver approach for light weight portable ring-fenching agents that can be unique per deployment.</p>
+<p>Doing so realise the ideal characteristics stated in the last row of the Defensive Coverage Matrix. </p>
+<p>The benefits of Ring-fencing with Moving Target agents are:
+- Long term defensive value suitable for protecting critical infrastructure assets that are adverse to constant driver or related signatures updates.
+- Disrupts new malware &amp; initial intrusion callbacks to C2 &amp; lateral movement without upkeeping of signatures.
+- Even under detect-only mode, it has much better signal-to-noise ratio than conventional detection engineering that usually ends up costly &amp; noisy.</p>
+<blockquote>
+<p>There are already more host controls that are based on Ring-Fencing approaches, hopefully we can see more that cannot be easily disarmed by abusing Windows inherent weaknesses.</p>
+</blockquote>
 
 
 
