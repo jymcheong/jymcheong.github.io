@@ -1054,8 +1054,9 @@
 </blockquote>
 <p>The last section further explains ring-fencing that disrupts malicious network &amp; cross-process access.</p>
 <h3 id="how-to-ring-fence">How to Ring-Fence?</h3>
-<p>It is basically multi-layered barriers to disrupt attacks, <em>but won't affect legimate processes</em>. Let's use this 3-type model approach to divide &amp; conquer the problem.</p>
-<h4 id="type-1"><em>Type 1</em>:</h4>
+<p><img alt="" src="../../assets/ringFence.png" /></p>
+<p>It is basically dual-layer barriers to disrupt attacks, <em>but won't affect legimate processes</em>. Let's use this 3-type model approach to divide &amp; conquer the problem.</p>
+<h4 id="type-1-denied-by-app-control"><em>Type 1</em> denied by App Control:</h4>
 <ul>
 <li>Malicious PE forms the bulk of the problem.</li>
 <li>Application Control is useful since it eliminates tracking of an infinite bad-list, BUT... </li>
@@ -1079,14 +1080,14 @@
 <p>This simple file ownership distinction can deny ALL written PE files written under non-privileged context, including DLL loading techniques. A non-privileged user-process cannot change the file ownership to <code>SYSTEM</code>, <code>TrustedInstaller</code> or <code>Administrators Group</code>.</p>
 </blockquote>
 <p>It is therefore possible to achieve low cost &amp; effort Application Control, simply with native NTFS ACLs. I covered in detail with my <a href="https://github.com/jymcheong/ETW-tutorialSet/tree/main/ETW%20Helper%20Class">ETW series</a> here. That sharing also includes C# source codes to explain how file-ownership control can be enforced.</p>
-<h4 id="type-2-3"><em>Type 2 &amp; 3</em>:</h4>
+<h4 id="type-2-3-disrupted-by-granular-process-profiling"><em>Type 2 &amp; 3</em> disrupted by granular process profiling:</h4>
 <p>We know that chasing "bad" or offensive techniques is a challenge since it is an infinite set like the one shown on the right of the figure:
 <img alt="" src="../../assets/infiniteBad.png" /></p>
 <p>We also know that the set of network &amp; cross-process accessing processes are always finite in any endpoints. The intersection of such process that can be either abused or exploited is even smaller. This may look too abstract, let's look at a real world concrete example:</p>
 <p><img alt="" src="../../assets/githubC2.png" /></p>
 <p>This is one of those hide-and-seek games that criminals employ to abuse GitHub as a C2 center. When law enforcement takes down a specific GitHub repository, attackers quickly set up another one. Let's focus on the green box; no matter which repository that is hosting, this is the point where a victim clicks the LNK file that triggers the download of MSHTA.exe, which then downloads more files.</p>
 <blockquote>
-<p>Using granular process profiling, we can effectively isolate the network and cross-process access by disrupting the new process profile that deviates from our baseline.</p>
+<p>Using granular process profiling, we can effectively isolate the network and cross-process access by disrupting the new process profile that deviates from our baseline. </p>
 </blockquote>
 <p>"Coarse" host firewall rules are not sufficient because they typically focus on either the destination or the program path. In this case, MSHTA.exe is a legitimate system program. There are numerous system binaries that we might not want to block network access for. By extending ideas from Application Control, we can achieve a granular profile of existing processes that egress and access memory across processes. </p>
 <blockquote>
