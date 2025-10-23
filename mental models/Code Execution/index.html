@@ -1099,7 +1099,7 @@
 <p>While causing an outage that is hard to recover may not be beneficial for criminals at large, abusing Windows' inherent weaknesses by exploiting vulnerable drivers to disable EDR, AV, or App Control can be quite useful. This phenomenon is known as Bring-Your-Own-Vulnerable Driver (BYOVD).</p>
 <p>In the past, there were some barrier to entry for such disabling of host control as it still required some skills. But it has now become commoditized &amp; accessible to low to mid skilled criminals. </p>
 <blockquote>
-<p>The core issue is that most product are very static in nature &amp; there are many ways to disable them despite having anti-tampering in place. This perpetuates the unending cycle of updates to deal with this cat-&amp;-mouse game.</p>
+<p>The core issue is that most products are very static in nature &amp; waiting to be tampered. Despite some anti-tampering, the underlying OS is still vulnerable to attacks.</p>
 </blockquote>
 <p>Moving-Target agents adopt a fight fire with fire approach, by ditching traditional kernel drivers for light weight portable agents that are unique per deployment. Doing so realise the favorable characteristics stated in the last row of the earlier Defensive Coverage Matrix.</p>
 <p>The benefits of Ring-fencing with Moving Target agents are:</p>
@@ -1108,6 +1108,9 @@
 <li>Disrupts new malware &amp; initial intrusion callbacks to C2 &amp; lateral movement without upkeeping of signatures.</li>
 <li>Even under detect-only mode, it has much better signal-to-noise ratio than conventional detection engineering that usually ends up costly &amp; noisy.</li>
 </ul>
+<h3 id="why-theres-still-security-by-obscurity">Why there's still security by obscurity?</h3>
+<p>While moving-target host agents may appear to rely on security by obscurity, they actually gain defensive strength from unpredictability. Most commercial off-the-shelf (COTS) endpoint products expose static attack surfaces—unchanging drivers, predictable configurations, and stable process behaviors—that adversaries can study and exploit over time. </p>
+<p>By contrast, moving-target agents shift these parameters dynamically, denying attackers a fixed point of reference. Kerckhoffs’s principle applies to cryptographic systems, not to adaptive defensive architectures; misapplying it here overlooks the practical longevity that controlled uncertainty can provide in real-world defense.</p>
 <blockquote>
 <p>There are already more host controls that are based on Ring-Fencing approaches, hopefully we can see more that cannot be easily disarmed by abusing Windows inherent weaknesses.</p>
 </blockquote>
