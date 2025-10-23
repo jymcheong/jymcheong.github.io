@@ -884,7 +884,7 @@
 </blockquote>
 <p>We noticed some patterns:</p>
 <ol>
-<li>Write a <em>new</em> PE file that <strong>wasn't in the target in the first place</strong>, then someone or something executes it...</li>
+<li>A <em>new</em> PE file written to disk that <strong>wasn't in the target in the first place</strong>, then someone or something executes it...</li>
 <li>Content based but Non-PEs files that may run malicious scripting with PDF (javascript) or a MS Office document (vba) &amp; various formats </li>
 <li>Run an exploit tool (like Eternal Blue exploit CVE-2022-46869) that triggers a vulnerable service for remote arbitrary code execution (e.g. shellcodes), which in turn runs 1 or 2 (e.g. cmd / powershell scripting)</li>
 </ol>
@@ -1065,7 +1065,8 @@
 </ul>
 <p>Two hygiene factors that are conducive to effective App Control, <strong><em>without maintaining allow-lists</em></strong>: </p>
 <ol>
-<li>Use <code>Standard Users</code> for your the bulk of users in your client-zones. </li>
+<li>Users should be in <code>Standard Users</code> for your the bulk of users. </li>
+<li>Minimize the total number of Local admins (or eliminate if possible) within your client-zones. </li>
 <li>Avoid deploying programs in user-writable folders &amp; have executable files writable by <code>Standard Users</code>.</li>
 </ol>
 <blockquote>
@@ -1077,7 +1078,7 @@
 </ul>
 <p>The exception to default file-ownership behavior is under certain UAC setting for Local Admin &amp; Domain Admin, where written files are immediately owned by <code>Administrators Group</code>.</p>
 <blockquote>
-<p>This simple file ownership distinction can deny ALL written PE files written under non-privileged context, including DLL loading techniques. A non-privileged user-process cannot change the file ownership to <code>SYSTEM</code>, <code>TrustedInstaller</code> or <code>Administrators Group</code>.</p>
+<p>This simple file ownership distinction can deny ALL written PE files written under non-privileged context, including DLL loading techniques because a non-privileged user-process cannot change file ownership to <code>SYSTEM</code>, <code>TrustedInstaller</code> or <code>Administrators Group</code>.</p>
 </blockquote>
 <p>It is therefore possible to achieve low cost &amp; effort Application Control, simply with native NTFS ACLs. I covered in detail with my <a href="https://github.com/jymcheong/ETW-tutorialSet/tree/main/ETW%20Helper%20Class">ETW series</a> here. That sharing also includes C# source codes to explain how file-ownership control can be enforced.</p>
 <h4 id="type-2-3-disrupted-by-granular-process-profiling"><em>Type 2 &amp; 3</em> disrupted by granular process profiling:</h4>
