@@ -1040,14 +1040,15 @@
 <p>Adversaries are well funded to get hold of such products to figure out ways to disarm &amp; evade.</p>
 </blockquote>
 <h2 id="ring-fencing-disrupt-the-vectors-moving-target-protect-the-product">Ring-fencing (Disrupt the vectors) + Moving-Target (Protect the product)</h2>
-<p>By breaking down Code-Execution into 3 simple bins, it helped us identify these factors:</p>
-<ol>
-<li>Most offensive codes tend to be packaged into compiled PE files, not coincidence that ransomware are mostly PEs.</li>
-<li>Compared to PEs, offensive scripts are easier to reverse engineer.</li>
-<li>Blocking PE files delivery is common, most corporate proxies can &amp; will, even free email services do that. </li>
-<li>Type 2 techniques are reliable for getting more compiled codes into the target, despite the network layer controls mentioned above.</li>
-<li>Type 2 &amp; 3 are also useful for server-side remote code execution (e.g. SQLi &amp; Log4J exploits). </li>
-</ol>
+<p>By segmenting code execution into three distinct categories, we identified key behavioral patterns and control opportunities:
+- Offensive operations often rely on compiled PE binaries, which aligns with the fact that most ransomware families are distributed as executable files.
+- Compared to PEs, scripted payloads are easier to inspect and reverse-engineer, reducing their long-term stealth and impact potential.
+- PE file delivery is already heavily restricted by corporate proxies and email safeguards, which routinely block or strip executable attachments.
+- Type 2 delivery mechanisms remain dependable for introducing compiled code into target environments, even when network-level filtering is in place.
+- Both Type 2 and Type 3 vectors are also highly relevant for server-side remote code execution scenarios, including SQL injection and Log4J-style exploit chains.</p>
+<blockquote>
+<p>This perspective reinforces two strategic pillars: Ring-fencing disrupts the delivery vectors, while Moving‑Target Defense protects the deployed product by  shifting its attack surface.</p>
+</blockquote>
 <p>Most if not all INITIAL Code-Executions are based on some multi-staged that <strong><em>WILL eventually involve network &amp; cross-process access</em></strong>. </p>
 <blockquote>
 <p>Think of it as a multi-staged rocket launch. It may seem powerful but it is actually quite fragile. If one of the stages fails, the whole launch fails. </p>
