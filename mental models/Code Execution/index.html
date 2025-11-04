@@ -1041,11 +1041,21 @@
 </blockquote>
 <h2 id="ring-fencing-disrupt-the-vectors-moving-target-protect-the-product">Ring-fencing (Disrupt the vectors) + Moving-Target (Protect the product)</h2>
 <p>By segmenting code execution into three distinct categories, we identified key behavioral patterns and control opportunities:
-- Offensive operations often rely on compiled PE binaries, which aligns with the fact that most ransomware families are distributed as executable files.
-- Compared to PEs, scripted payloads are easier to inspect and reverse-engineer, reducing their long-term stealth and impact potential.
-- PE file delivery is already heavily restricted by corporate proxies and email safeguards, which routinely block or strip executable attachments.
-- Type 2 delivery mechanisms remain dependable for introducing compiled code into target environments, even when network-level filtering is in place.
-- Both Type 2 and Type 3 vectors are also highly relevant for server-side remote code execution scenarios, including SQL injection and Log4J-style exploit chains.</p>
+- Offensive operations often rely on compiled PE binaries, which aligns with the fact that most ransomware families are distributed as executable files.</p>
+<ul>
+<li>
+<p>Compared to PEs, scripted payloads are easier to inspect and reverse-engineer, reducing their long-term stealth and impact potential.</p>
+</li>
+<li>
+<p>PE file delivery is already heavily restricted by corporate proxies and email safeguards, which routinely block or strip executable attachments.</p>
+</li>
+<li>
+<p>Type 2 delivery mechanisms remain dependable for introducing compiled code into target environments, even when network-level filtering is in place.</p>
+</li>
+<li>
+<p>Both Type 2 and Type 3 vectors are also highly relevant for server-side remote code execution scenarios, including SQL injection and Log4J-style exploit chains.</p>
+</li>
+</ul>
 <blockquote>
 <p>This perspective reinforces two strategic pillars: Ring-fencing disrupts the delivery vectors, while Moving‑Target Defense protects the deployed product by  shifting its attack surface.</p>
 </blockquote>
